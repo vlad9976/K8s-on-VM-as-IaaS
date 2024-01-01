@@ -6,7 +6,7 @@
 1. Spin 3 Virtual machines
    1.1 Master Node
    1.2 Worker Nodes(2)
-3. Install Kubernetes 1.25.4 version
+3. Install Kubernetes 1.25.4 version <br>
    2.1 kubelet 1.25.4-00 <br>
    2.2 kubeadm 1.25.4-00 </br>
    2.3 kubectl 1.25.4-00
