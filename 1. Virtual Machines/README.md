@@ -3,7 +3,7 @@
 <h3>First, download required images. You can use the following link https://ubuntu.com/download/server to download Ubuntu iso image. </h3>
 
 # <h4>1. Open VirtualBox and choose “New” to start configuration.</h4> 
-![alt text](/images/Screenshot_1.png)
+![alt text](./images/Screenshot_1.png)
 
 # <h4>2. In the opening form type new virtual machine name and choose the path where VM data will be stored.</h4>
 ![alt text](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*4yVAZIBs007OLj1Oi1D87w.png)
