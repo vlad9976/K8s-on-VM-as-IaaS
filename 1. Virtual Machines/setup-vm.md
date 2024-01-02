@@ -4,7 +4,7 @@
 <h3>Let’s create virtual machines. I will describe the detailed scenario for master node and you can create 2 worker nodes by yourself.</h3>
 <h3>First, download required images. You can use the following link https://ubuntu.com/download/server to download Ubuntu iso image. </h3>
 
-# <h4>1. Open VirtualBox and choose “New” to start configuration.</h4> 
+# <h4>1. Open VirtualBox📦 and choose “New” to start configuration.</h4> 
 <img src="images/Screenshot_5.png" width="600" height="100">
 
 # <h4>2. In the opening form type new virtual machine name and choose the path where VM data will be stored.</h4>
@@ -27,7 +27,10 @@
 <img src="images/Screenshot_6.png" width="700" height="350">
 
 # <h4>8. I chose network interface "Intel(R) Wi-Fi 6 AX201 160MHz". Let’s check such interface exists in my network run ipconfig /all. My desktop is running on Windows 10</h4>
-<img src="images/Screenshot_8.png" width="500" height="150">
+<img src="images/Screenshot_10.png" width="500" height="250">
+<h4>my IP address is 192.168.8.100 in 192.168.8.0/24 subnet.</h4>
+
+# <h4>I also suggest to configure a shared folder, because it’s very helpful to use sh scripts during setup</h4>>
 
 
 
