@@ -32,13 +32,13 @@
 
 # <h4>I also suggest to configure a shared folder, because it’s very helpful to use bash scripts during setup</h4>
 <img src="images/Screenshot_11.png" width="500" height="250">
-<h4>From the terminal, run the following commands:
+<h4>From the terminal, run the following commands:<br>
 
- $ sudo su
- $ apt install gcc make
- $ mkdir --parents /media/cdrom
- $ mount /dev/cdrom /media/cdrom
- $ /media/cdrom/VBoxLinuxAdditions.run
+ $ sudo su<br>
+ $ apt install gcc make<br>
+ $ mkdir --parents /media/cdrom<br>
+ $ mount /dev/cdrom /media/cdrom<br>
+ $ /media/cdrom/VBoxLinuxAdditions.run<br>
  $ reboot</h4>
 
 
