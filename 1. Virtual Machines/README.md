@@ -6,11 +6,16 @@
 <img src="images/Screenshot_5.png" width="600" height="100">
 
 # <h4>2. In the opening form type new virtual machine name and choose the path where VM data will be stored.</h4>
-<img src="images/Screenshot_1.png" width="700" height="300">
+<img src="images/Screenshot_1.png" width="700" height="400">
 
 # <h4>3. Now press “Next” and configure CPU and memory resources. I would suggest at least 2 CPU and 2G RAM.</h4>
-<img src="images/Screenshot_2.png" width="700" height="300">
+<img src="images/Screenshot_2.png" width="700" height="350">
 
 # <h4>4. Configuration of disk space resources. For master node we will set 20GB disk and 50GB for each worker node </h4>
-![alt text](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*1bv5-NQ0ciH96LftH1bEsA.png)
+<img src="images/Screenshot_3.png" width="700" height="350">
+
+# <h4>Press “Next” and finish set up.</h4>
+
+
+
 
