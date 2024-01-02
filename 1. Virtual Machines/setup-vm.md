@@ -33,7 +33,7 @@
 # <h4>I also suggest to configure a shared folder, because it’s very helpful to use bash scripts during setup</h4>
 <img src="images/Screenshot_11.png" width="500" height="250">
 <h4>From the terminal, run the following commands:<br>
-
+<br>
  $ sudo su<br>
  $ apt install gcc make<br>
  $ mkdir --parents /media/cdrom<br>
