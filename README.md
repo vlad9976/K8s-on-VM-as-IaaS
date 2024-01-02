@@ -24,7 +24,7 @@
    5.2 Init kubernetes cluster ♾️
    
 # Requirments
-VirtualBox📦-
+VirtualBox📦--
 
 
 
