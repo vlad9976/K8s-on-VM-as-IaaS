@@ -9,5 +9,7 @@
 ![alt text](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*4yVAZIBs007OLj1Oi1D87w.png)
 
 # <h4>3. Now press “Next” and configure CPU and memory resources. I would suggest at least 2 CPU and 2G RAM.</h4>
-![alt text](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*TxYlqk-WA7g2ZL8L7ZRirw.png)
+![alt text](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*TxYlqk-WA7g2ZL8L7ZRirw.png
+
+# <h4>4. Configuration of disk space resources. For master node we will set 50GB disk and 20DG for each worker node </h4>
 
