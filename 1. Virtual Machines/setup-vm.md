@@ -15,8 +15,11 @@
 
 # <h4>4. Configuration of disk space resources. For master node we will set 20GB disk and 50GB for each worker node </h4>
 <img src="images/Screenshot_3.png" width="700" height="350">
-
 # <h4>Press “Next” and finish set up.</h4>
+
+# <h4>Shutdown the new create vm to configure the network</h4>
+
+
 
 
 
