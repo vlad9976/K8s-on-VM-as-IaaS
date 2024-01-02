@@ -15,10 +15,10 @@
 
 # <h4>4. Configuration of disk space resources. For master node we will set 20GB disk and 50GB for each worker node </h4>
 <img src="images/Screenshot_3.png" width="700" height="350">
-# <h4>Press “Next” and finish set up.</h4>
+<h4>Press “Next” and finish set up.</h4>
 
 # <h4>Shutdown the new create vm to configure the network</h4>
-<img src="images/Screenshot_9.png" width="600" height="100">
+<img src="images/Screenshot_9.png" width="400" height="100">
 
 # <h4>Choose “Settings” for you new virtual machine</h4>
 <img src="images/Screenshot_4.png" width="600" height="100">
@@ -27,7 +27,7 @@
 <img src="images/Screenshot_6.png" width="700" height="350">
 
 # <h4>I chose network interface "Intel(R) Wi-Fi 6 AX201 160MHz". Let’s check such interface exists in my network. My desktop is running on Windows 10</h4>
-<img src="images/Screenshot_8.png" width="700" height="350">
+<img src="images/Screenshot_8.png" width="500" height="150">
 
 
 
