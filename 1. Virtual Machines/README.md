@@ -16,6 +16,8 @@
 
 # <h4>Press “Next” and finish set up</h4>
 
+#<h4>[Continue Ubuntu Installation][PlDa]</h4>
+[PlDa]: <../"ubuntuinstalltion"/setup.md>
 
 
 
