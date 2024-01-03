@@ -35,4 +35,4 @@
 <h4>10. Now save all your settings</h4>
 
 # [Continue to Ubuntu Installation][PlDa]
-[PlDa]:<../Ubuntu Installation/setup.md>
+[PlDa]:<../2. Ubuntu Installation/setup.md>
