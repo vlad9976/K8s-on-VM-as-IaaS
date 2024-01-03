@@ -142,10 +142,31 @@ kubeadm join k8smaster:6443 --token e8r3yb.it74vseuaxlzjlzp \
 --discovery-token-ca-cert-hash sha256:a43e08f52250a63486dd373cd50756a2ac0e90b62fbf0031a5e386f3d7e4f816 --cri-socket unix:///var/run/cri-dockerd.sock
 ```
 
-# Wait for a while and you can check the installation using kubectl.
+# Wait for a while and you can check the installation using kubectl
 
 ```sh
 kubectl get node
+or
+kubectl get node -o wide
 ```
+# Check cluster setup
+<h4>By default kubernetes uses default namespace. For system pods it uses kube-system, flannel uses kube-flannel. To get all pods from all namespaces you can use</h4>
 
+```sh
+kubectl get pod --all-namespaces
+# Output
+NAMESPACE       NAME                                        READY   STATUS    RESTARTS      AGE
+kube-flannel    kube-flannel-ds-7nhwn                       1/1     Running   0         5m
+kube-flannel    kube-flannel-ds-sxfgg                       1/1     Running   0        10m
+kube-flannel    kube-flannel-ds-xxhlh                       1/1     Running   0             12m
+kube-system     coredns-565d847f94-9ht74                    1/1     Running   0             17m
+kube-system     coredns-565d847f94-wrq24                    1/1     Running   0             17m
+kube-system     etcd-k8smaster                              1/1     Running   0             17m
+kube-system     kube-apiserver-k8smaster                    1/1     Running   0             17m
+kube-system     kube-controller-manager-k8smaster           1/1     Running   0             17m
+kube-system     kube-proxy-9nfd4                            1/1     Running   0        17m
+kube-system     kube-proxy-cf7v7                            1/1     Running   0        5m
+kube-system     kube-proxy-cmq2k                            1/1     Running   0        10m
+kube-system     kube-scheduler-k8smaster                    1/1     Running   0        12m
+```
 
