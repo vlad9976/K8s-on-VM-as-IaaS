@@ -169,4 +169,5 @@ kube-system     kube-proxy-cf7v7                            1/1     Running   0 
 kube-system     kube-proxy-cmq2k                            1/1     Running   0             10m
 kube-system     kube-scheduler-k8smaster                    1/1     Running   0             12m
 ```
-
+<h4>Pay attention that there are 3 flannel pods, each for every node.
+All pods should running fine.</h4>
