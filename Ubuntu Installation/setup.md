@@ -1,5 +1,7 @@
-# Ubuntu 22.04.3 installation
+# Ubuntu Server 22.04.3 installation
 
+# Start you virtual machine.
+<img src="images/Screenshot_12.png" width="700" height="400">
 
 <img src="images/Screenshot_11.png" width="700" height="400">
 # <h4>From the terminal, run the following commands:<br>
