@@ -82,7 +82,15 @@ wget https://raw.githubusercontent.com/flannel-io/flannel/master/Documentation/k
 
 ```sh
 #kube-flannel.yaml
-cat kube-flannel.yaml 
+cat kube-flannel.yaml
+
+  net-conf.json: |
+    {
+      "Network": "10.244.0.0/16",
+      "Backend": {
+        "Type": "vxlan"
+      }
+    }
 ```
 
 <h3>Finally, execute kubectl command</h3>
