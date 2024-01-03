@@ -1,10 +1,10 @@
 # Kubernetes Installation
 
 # Configure share folder
-<h3>From the terminal, run the following commands:<h3><br>
-
+<h3>From the terminal, run the following commands:<h3>
+<br>
  1. sudo su
-
+</br>
  2. apt install gcc make<br>
 
  3. mkdir --parents /media/cdrom<br>
