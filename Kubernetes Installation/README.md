@@ -150,4 +150,4 @@ I created 2 worker nodes named worker-1, worker-2 following the same steps as fo
 # or
 
 # [Continue to finish Cluster Installation][PlDa]
-[PlDa]:<Kubernetes/Cluster installation/README.md>
+[PlDa]:<../Cluster installation/README.md>
