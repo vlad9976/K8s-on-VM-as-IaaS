@@ -115,7 +115,7 @@ FLANNEL_MTU=1450
 FLANNEL_IPMASQ=true
 ```
 
-<h3>Flannel pods are created in its own namespace kube-flannel, so you can check flannel pods are running</h3>>
+<h3>Flannel pods are created in its own namespace kube-flannel, so you can check flannel pods are running</h3>
 
 ```sh
 kubectl get pods -n kube-flannel
@@ -134,7 +134,7 @@ kubeadm token create --print-join-command
 ```
 <h3>Now you can connect to your worker nodes and join the cluster.<br>
 Do not forget to add IP mapping for master-vm in /etc/hosts on all you worker nodes<br>
-We will have to append this line to the join procces --cri-socket unix:///var/run/cri-dockerd.sock
+We will have to append this line to the join command --cri-socket unix:///var/run/cri-dockerd.sock
 </h3>
 
 
