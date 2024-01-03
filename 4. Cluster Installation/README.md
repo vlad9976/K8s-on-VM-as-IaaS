@@ -156,17 +156,17 @@ kubectl get node -o wide
 kubectl get pod --all-namespaces
 # Output
 NAMESPACE       NAME                                        READY   STATUS    RESTARTS      AGE
-kube-flannel    kube-flannel-ds-7nhwn                       1/1     Running   0         5m
-kube-flannel    kube-flannel-ds-sxfgg                       1/1     Running   0        10m
+kube-flannel    kube-flannel-ds-7nhwn                       1/1     Running   0              5m
+kube-flannel    kube-flannel-ds-sxfgg                       1/1     Running   0             10m
 kube-flannel    kube-flannel-ds-xxhlh                       1/1     Running   0             12m
 kube-system     coredns-565d847f94-9ht74                    1/1     Running   0             17m
 kube-system     coredns-565d847f94-wrq24                    1/1     Running   0             17m
 kube-system     etcd-k8smaster                              1/1     Running   0             17m
 kube-system     kube-apiserver-k8smaster                    1/1     Running   0             17m
 kube-system     kube-controller-manager-k8smaster           1/1     Running   0             17m
-kube-system     kube-proxy-9nfd4                            1/1     Running   0        17m
-kube-system     kube-proxy-cf7v7                            1/1     Running   0        5m
-kube-system     kube-proxy-cmq2k                            1/1     Running   0        10m
-kube-system     kube-scheduler-k8smaster                    1/1     Running   0        12m
+kube-system     kube-proxy-9nfd4                            1/1     Running   0             17m
+kube-system     kube-proxy-cf7v7                            1/1     Running   0              5m
+kube-system     kube-proxy-cmq2k                            1/1     Running   0             10m
+kube-system     kube-scheduler-k8smaster                    1/1     Running   0             12m
 ```
 
