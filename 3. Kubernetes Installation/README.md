@@ -152,4 +152,4 @@ I created 2 worker nodes named worker-1, worker-2 following the same steps as fo
 
 
 [PlDb]:<../1. Virtual Machines/README.md>
-[PlDa]:<../4. Cluster installation/README.md>
+[PlDa]:<../4. Cluster Installation/README.md>
