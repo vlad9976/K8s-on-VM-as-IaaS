@@ -1,20 +1,23 @@
-# 🕸️ Kubernetes Setup
+# <a href="https://kubernetes.io/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/kubernetes-icon.svg" alt="Kubernetes" height="50" /></a> Kubernetes Setup
 
 <h3>Configure share folder</h3>
 
 <h4>First of all go to Devices -> Insert Guest Additions CD image</h4>
 <img src="images/Screenshot_11.png" width="800" height="600">
 
+after Inserting Guest Additions CD image
 From the terminal, run the following commands:
 
 ```sh
 sudo su
-apt install gcc make
+apt install bzip2
+apt install gcc make 
 mkdir --parents /media/cdrom
 mount /dev/cdrom /media/cdrom
 /media/cdrom/VBoxLinuxAdditions.run
 reboot
 ```
+Your share folder will be in /media/sf<your_folder>
 
 # Disable Swap
 
