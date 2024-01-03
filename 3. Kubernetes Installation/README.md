@@ -2,7 +2,7 @@
 
 <h3>Configure share folder</h3>
 
-<h3>First of all got to Devices -> Insert Guest Additions CD image<h3>
+<h3>First of all got to Devices -> Insert Guest Additions CD image</h3>
 <img src="images/Screenshot_11.png" width="800" height="600">
 
 From the terminal, run the following commands:
