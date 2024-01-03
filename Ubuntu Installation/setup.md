@@ -19,7 +19,7 @@
 <img src="images/Screenshot_6.png" width="800" height="600">
 
 # Now proceed with installation and wait until Ubuntu is successfully installed on your virtual machine
-<img src="images/Screenshot_11.png" width="800" height="600">
+
 
 # <h3> Finally🥳, installer will ask you to reboot your machine, so after restart login and let’s check that everything goes right way</h3>
 
