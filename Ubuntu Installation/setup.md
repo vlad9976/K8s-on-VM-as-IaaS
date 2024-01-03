@@ -1,7 +1,7 @@
 # Ubuntu 22.04.3 installation
 
 
-<img src="images/Screenshot_11.png" width="500" height="250">
+<img src="images/Screenshot_11.png" width="700" height="400">
 <h4>From the terminal, run the following commands:<br>
 <br>
  1. sudo su<br>
