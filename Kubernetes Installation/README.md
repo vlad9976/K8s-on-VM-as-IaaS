@@ -74,12 +74,13 @@ sudo tee /etc/docker/daemon.json <<EOF
 }
 EOF
 ```
-<h3>Check your installation</h3>
+# Check your installation
 
-````sh
+```sh
 docker --version
 ```
-<h3>To finish Docker setup for kubernetes let’s install Mirantis</h3>
+
+# To finish Docker setup for kubernetes let’s install Mirantis
 
 ```sh
 #mirantis.sh
@@ -100,7 +101,8 @@ sudo systemctl daemon-reload
 sudo systemctl enable cri-docker.service
 sudo systemctl enable --now cri-docker.socket
 ```
-<h3>Check your installation.</h3>
+
+# Check your installation
 
 ```sh
 cri-dockerd --version
