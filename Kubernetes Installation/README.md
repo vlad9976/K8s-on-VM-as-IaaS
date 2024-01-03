@@ -151,4 +151,4 @@ I created 2 worker nodes named worker-1, worker-2 following the same steps as fo
 [PlDa]:<../1. Virtual Machines/README.md>
 
 # [Continue to finish cluster Installation][PlDa]
-[PlDa]:<../1. Virtual Machines/setup.md>
+[PlDa]:<../Cluster installation/setup.md>
