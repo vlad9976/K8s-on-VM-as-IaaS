@@ -9,3 +9,5 @@
  $ mount /dev/cdrom /media/cdrom<br>
  $ /media/cdrom/VBoxLinuxAdditions.run<br>
  $ reboot</h4>
+
+ test
