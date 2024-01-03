@@ -1,5 +1,10 @@
 # Install Ubuntu
 
+
+
+
+
+
 <img src="images/Screenshot_11.png" width="500" height="250">
 <h4>From the terminal, run the following commands:<br>
 <br>
