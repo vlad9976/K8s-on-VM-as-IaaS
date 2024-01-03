@@ -38,14 +38,7 @@ Finally, you can check available network interfaces.<br>
 </br>
 
 <h3> If all checks were successfully passed you are ready to install docker and kubernetes on your virtual machine</h3>
-<h4>From the terminal, run the following commands:<br>
-<br>
- 1. sudo su<br>
- 2. apt install gcc make<br>
- 3. mkdir --parents /media/cdrom<br>
- 4. mount /dev/cdrom /media/cdrom<br>
- 5. /media/cdrom/VBoxLinuxAdditions.run<br>
- 6. reboot</h4>
 
- test
+# [Continue to K8s Installation][PlDa]
+[PlDa]:<../Kubernetes installation/k8s-setup.md>
 
