@@ -37,7 +37,7 @@ Finally, you can check available network interfaces.<br>
     ip a 
 </br>
 
-<h3> If all checks were successfully passed you are ready to install docker and kubernetes on your virtual machine</h3>
+<h4> If all checks were successfully passed you are ready to install docker and kubernetes on your virtual machine</h4>
 
 # [Continue to K8s Installation][PlDa]
 [PlDa]:<../3. Kubernetes Installation/README.md>
