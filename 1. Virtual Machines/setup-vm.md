@@ -34,6 +34,9 @@
 <img src="images/Screenshot_12.png" width="500" height="250">
 <h4>Now save all your settings</h4>
 
+# [Continue to Ubuntu Installation][PlDa]
+[PlDa]:<../"Ubuntu installation"/setup.md>
+
 
 
 
