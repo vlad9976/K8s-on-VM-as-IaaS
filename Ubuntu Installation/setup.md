@@ -21,6 +21,22 @@
 # Now proceed with installation and wait until Ubuntu is successfully installed on your virtual machine
 <img src="images/Screenshot_11.png" width="800" height="600">
 
+# Finally🥳, installer will ask you to reboot your machine, so after restart login and let’s check that everything goes right way
+
+# Check Ubuntu installation.
+Check access to you local computer from master node<br>
+
+     ping <Localhost IP><br>
+</br>
+Check access to internet on your master node<br>
+
+     curl www.google.com
+</br>     
+Finally, you can check available network interfaces.<br>
+
+    ip a 
+</br>
+
 
 <h4>From the terminal, run the following commands:<br>
 <br>
