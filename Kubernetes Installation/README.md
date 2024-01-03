@@ -111,3 +111,33 @@ systemctl status cri-docker.socket
 
 # Configure Kubernetes prerequisites.
 <h4>Documentation: https://kubernetes.io/docs/setup/production-environment/container-runtimes/</h4>
+
+<h3>I created prerequisites.sh based on documentation<h3>
+
+```sh
+#prerequisites.sh
+sudo tee /etc/modules-load.d/k8s.conf <<EOF
+overlay
+br_netfilter
+EOF
+
+sudo modprobe overlay
+sudo modprobe br_netfilter
+
+sudo tee /etc/sysctl.d/kubernetes.conf<<EOF
+net.bridge.bridge-nf-call-ip6tables = 1
+net.bridge.bridge-nf-call-iptables = 1
+net.ipv4.ip_forward = 1
+EOF
+
+sudo sysctl --system
+```
+
+# Run the script and check setup was correctly applied.
+
+```sh
+lsmod | grep br_netfilter
+lsmod | grep overlay
+sysctl net.bridge.bridge-nf-call-iptables net.bridge.bridge-nf-call-ip6tables net.ipv4.ip_forward
+```
+
