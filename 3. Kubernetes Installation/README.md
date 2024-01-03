@@ -24,7 +24,7 @@ sudo swapoff -a
 free -h
 ```
 <h4>Should look like this</h4>
-<img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*XFIwxWHc9SMMXMcWb65-GQ.png" width="900" height="50">
+<img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*XFIwxWHc9SMMXMcWb65-GQ.png" width="500" height="30">
 
 # Install kubernetes
 <h4>Now it’s time to install kubernetes itself on the master node. I made my cluster set up for 1.25.4 version</h4>
