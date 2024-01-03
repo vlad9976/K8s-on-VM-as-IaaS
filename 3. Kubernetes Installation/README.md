@@ -17,7 +17,7 @@ mount /dev/cdrom /media/cdrom
 /media/cdrom/VBoxLinuxAdditions.run
 reboot
 ```
-Your share fplder will be in /media/sf<your_folder>
+Your share folder will be in /media/sf<your_folder>
 
 # Disable Swap
 
