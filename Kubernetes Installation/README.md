@@ -5,7 +5,7 @@
 <h4>First of all got to Devices -> Insert Guest Additions CD image<h4>
 <img src="images/Screenshot_11.png" width="800" height="600">
 
-<h3>From the terminal, run the following commands:<h3>
+From the terminal, run the following commands:
 
 ```sh
 sudo su
@@ -112,7 +112,7 @@ systemctl status cri-docker.socket
 # Configure Kubernetes prerequisites.
 <h4>Documentation: https://kubernetes.io/docs/setup/production-environment/container-runtimes/</h4>
 
-<h3>I created prerequisites.sh based on documentation<h3>
+I created prerequisites.sh based on documentation
 
 ```sh
 #prerequisites.sh
