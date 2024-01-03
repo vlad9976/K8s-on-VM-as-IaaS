@@ -1,13 +1,14 @@
-# Install Ubuntu
+# Ubuntu 22.04.3 installation
+
 
 <img src="images/Screenshot_11.png" width="500" height="250">
 <h4>From the terminal, run the following commands:<br>
 <br>
- $ sudo su<br>
- $ apt install gcc make<br>
- $ mkdir --parents /media/cdrom<br>
- $ mount /dev/cdrom /media/cdrom<br>
- $ /media/cdrom/VBoxLinuxAdditions.run<br>
- $ reboot</h4>
+ 1. sudo su<br>
+ 2. apt install gcc make<br>
+ 3. mkdir --parents /media/cdrom<br>
+ 4. mount /dev/cdrom /media/cdrom<br>
+ 5. /media/cdrom/VBoxLinuxAdditions.run<br>
+ 6. reboot</h4>
 
  test
