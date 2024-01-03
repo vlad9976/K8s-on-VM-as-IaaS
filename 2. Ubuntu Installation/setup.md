@@ -24,20 +24,20 @@
 # <h4>Finally🥳, installer will ask you to reboot your machine, so after restart login and let’s check that everything goes right way</h4>
 
 # Check Ubuntu installation.
-Check access to you local computer from master node<br>
+✅Check access to you local computer from master node<br>
 
      ping <Localhost IP>
 </br>
-Check access to internet on your master node<br>
+✅Check access to internet on your master node<br>
 
      curl www.google.com
 </br>     
-Finally, you can check available network interfaces.<br>
+✅Finally, you can check available network interfaces.<br>
 
     ip a 
 </br>
 
-<h4> If all checks were successfully passed you are ready to install docker and kubernetes on your virtual machine</h4>
+<h4> If all checks were successfully ✅✅✅ passed you are ready to install docker and kubernetes on your virtual machine</h4>
 
 # [Continue to K8s Installation][PlDa]
 [PlDa]:<../3. Kubernetes Installation/README.md>
