@@ -115,7 +115,7 @@ FLANNEL_MTU=1450
 FLANNEL_IPMASQ=true
 ```
 
-<h3>Flannel pods are created in its own namespace kube-flannel, so you can check flannel pods are running</h3>>
+<h3>Flannel pods are created in its own namespace kube-flannel, so you can check flannel pods are running</h3>
 
 ```sh
 kubectl get pods -n kube-flannel
