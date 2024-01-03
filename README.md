@@ -23,7 +23,7 @@
    5.1 Config image pull cri-dockerd.sock ⬇️<br>
    5.2 Init kubernetes cluster ♾️<br>
 
-6. Join worker nodes
+6. Join worker nodes 🔌
    
 # Requirments
 VirtualBox📦
