@@ -1,4 +1,4 @@
-# 🕸️ Kubernetes Installation
+# 🕸️ Kubernetes Setup
 
 <h3>Configure share folder</h3>
 
