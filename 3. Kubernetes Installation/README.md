@@ -23,12 +23,12 @@ sudo sed -i '/\sswap\s/s/^/#/' /etc/fstab
 sudo swapoff -a
 free -h
 ```
-<h3>Should look like this</h3>
+<h4>Should look like this</h4>
 <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*XFIwxWHc9SMMXMcWb65-GQ.png" width="900" height="50">
 
 # Install kubernetes
-<h3>Now it’s time to install kubernetes itself on the master node. I made my cluster set up for 1.25.4 version</h3>
-<h3>I’m going to put all required commands to k8s.sh file to run it in master node, and worker nodes after all</h3>
+<h4>Now it’s time to install kubernetes itself on the master node. I made my cluster set up for 1.25.4 version</h4>
+<h4>I’m going to put all required commands to k8s.sh file to run it in master node, and worker nodes after all</h4>
 
 ```sh
 # k8s.sh
@@ -143,9 +143,9 @@ sysctl net.bridge.bridge-nf-call-iptables net.bridge.bridge-nf-call-ip6tables ne
 
 # Setup worker nodes.
 
-<h3>Master node setup is completed and it’s time to create a cluster. However, it would be better to configure worker nodes on this step before going further.<br>
+<h4>Master node setup is completed and it’s time to create a cluster. However, it would be better to configure worker nodes on this step before going further.<br>
 
-I created 2 worker nodes named worker-1, worker-2 following the same steps as for master node.</h3>
+I created 2 worker nodes<br> worker-1,<br> worker-2<br> following the same steps as for master node.</h4>
 
  # [Continue to finish Cluster Installation][PlDa]
  # [Continue to Worker Installation][PlDb]
