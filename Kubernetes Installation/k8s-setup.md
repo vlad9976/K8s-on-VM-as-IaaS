@@ -1,6 +1,6 @@
 # Kubernetes Installation
 
-# Configure share folder
+<h3>Configure share folder</h3>
 
 <h4>First of all got to Devices -> Insert Guest Additions CD image<h4>
 <img src="images/Screenshot_11.png" width="800" height="600">
