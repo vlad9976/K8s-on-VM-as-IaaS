@@ -26,7 +26,7 @@
 # Check Ubuntu installation.
 Check access to you local computer from master node<br>
 
-     ping <Localhost IP><br>
+     ping <Localhost IP>
 </br>
 Check access to internet on your master node<br>
 
