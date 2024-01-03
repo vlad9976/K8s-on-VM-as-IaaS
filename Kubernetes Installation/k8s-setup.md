@@ -2,7 +2,8 @@
 
 # Configure share folder
 <h3>From the terminal, run the following commands:<h3>
-<br>
+test <br>
+
  1. sudo su
 </br>
  2. apt install gcc make<br>
