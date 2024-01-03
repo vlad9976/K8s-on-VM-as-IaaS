@@ -18,7 +18,7 @@
 # <h4>You can also install OpenSSH to connect to your virtual machine by ssh</h4>
 <img src="images/Screenshot_6.png" width="800" height="600">
 
-# <h4>Now proceed with installation and wait until Ubuntu is successfully installed on your virtual machine</h4>
+# <h4>Now proceed with installation and wait⏳ until Ubuntu is successfully installed on your virtual machine</h4>
 
 
 # <h4>Finally🥳, installer will ask you to reboot your machine, so after restart login and let’s check that everything goes right way</h4>
