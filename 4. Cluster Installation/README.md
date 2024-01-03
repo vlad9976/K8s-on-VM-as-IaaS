@@ -137,8 +137,15 @@ Do not forget to add IP mapping for master-vm in /etc/hosts on all you worker no
 We will have to append this line to the join command --cri-socket unix:///var/run/cri-dockerd.sock
 </h4>
 
-
 ```sh
 kubeadm join k8smaster:6443 --token e8r3yb.it74vseuaxlzjlzp \
 --discovery-token-ca-cert-hash sha256:a43e08f52250a63486dd373cd50756a2ac0e90b62fbf0031a5e386f3d7e4f816 --cri-socket unix:///var/run/cri-dockerd.sock
 ```
+
+# Wait for a while and you can check the installation using kubectl.
+
+```sh
+kubectl get node
+```
+
+
