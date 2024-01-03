@@ -146,3 +146,6 @@ sysctl net.bridge.bridge-nf-call-iptables net.bridge.bridge-nf-call-ip6tables ne
 <h3>Master node setup is completed and it’s time to create a cluster. However, it would be better to configure worker nodes on this step before going further.<br>
 
 I created 2 worker nodes named worker-1, worker-2 following the same steps as for master node.</h3>
+
+# [Continue to Worker Installation][PlDa]
+[PlDa]:<../1. Virtual Machines/setup.md>
