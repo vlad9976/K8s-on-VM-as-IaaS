@@ -5,6 +5,7 @@
 <h4>First of all go to Devices -> Insert Guest Additions CD image</h4>
 <img src="images/Screenshot_11.png" width="800" height="600">
 
+after Inserting Guest Additions CD image
 From the terminal, run the following commands:
 
 ```sh
