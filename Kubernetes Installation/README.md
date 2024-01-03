@@ -106,4 +106,8 @@ sudo systemctl enable --now cri-docker.socket
 
 ```sh
 cri-dockerd --version
+systemctl status cri-docker.socket
 ```
+
+# Configure Kubernetes prerequisites.
+<h4>Documentation: https://kubernetes.io/docs/setup/production-environment/container-runtimes/</h4>
