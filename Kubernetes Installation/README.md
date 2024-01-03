@@ -147,7 +147,8 @@ sysctl net.bridge.bridge-nf-call-iptables net.bridge.bridge-nf-call-ip6tables ne
 
 I created 2 worker nodes named worker-1, worker-2 following the same steps as for master node.</h3>
 
-# or
-
 # [Continue to finish Cluster Installation][PlDa]
 [PlDa]:<../Cluster installation/README.md>
+
+## [Continue to Worker Installation][PlDa]
+[PlDa]:<../1. Virtual Machines/README.md>
