@@ -2,7 +2,7 @@
 
 
 <img src="images/Screenshot_11.png" width="700" height="400">
-<h4>From the terminal, run the following commands:<br>
+# <h4>From the terminal, run the following commands:<br>
 <br>
  1. sudo su<br>
  2. apt install gcc make<br>
