@@ -16,7 +16,7 @@
 
 # <h4>Press “Next” and finish set up</h4>
 
-# [Continue to K8s Installation][PlDa]
+# [Continue to Ubuntu Installation][PlDa]
 [PlDa]:<../Ubuntu Installation/README.md>
 
 
