@@ -17,7 +17,7 @@
 # <h4>Press “Next” and finish set up</h4>
 
 #<h4>[Continue to Ubuntu Installation][PlDa]</h4>
-[PlDa]:<../"Ubuntu installation"/setup.md>
+[PlDa]:<../"Ubuntu installation"/README.md>
 
 
 
