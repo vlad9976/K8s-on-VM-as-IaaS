@@ -130,7 +130,7 @@ kubectl get pods -n kube-flannel
 In log file of kubeadm init command (master-vm.log) there is already a join command to use to join worker node to cluster.</h4>
 
 <h2>kubeadm join requires a special token. It expires in 24 hours</h2>
-To generate new token use:
+To generate new token on master use:
 
 ```sh
 kubeadm token create --print-join-command
