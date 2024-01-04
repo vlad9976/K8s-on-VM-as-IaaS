@@ -2,7 +2,6 @@
 <h3>😅 Why K8s? Because between the K and the S there are 8 letters.</h3>
 <h5>We will create kubernetes cluster on Ubuntu Server 22.04 LTS<br>Using virtualbox and deploying Metallb LoadBalancer and Nginx ingress controller</h5>
 
-<img src="/projects/metallb/stacked/color/metallb-stacked-color.png" width="95">
 
 # <h3>Steps in short</h3>
 1. Spin 3 Virtual machines👾👾<br>
