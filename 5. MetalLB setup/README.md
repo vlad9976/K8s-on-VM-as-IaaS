@@ -20,7 +20,7 @@ kubectl get svc
 # output
 <img src="./images/Screenshot_3.png" width="1000" height="120">
 
-# <img src="/img/icons8-install-64.png" width="180" height="180"> Installation
+# <img src="/img/icons8-install-64.png" width="30" height="30"> Installation
 The installation of MetalLB is easy we are going to perform it by applying the necessary manifests (everything will be provisioned in a new namespace named metallb-system)
 
 
