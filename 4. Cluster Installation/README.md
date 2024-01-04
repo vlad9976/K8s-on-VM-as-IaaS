@@ -3,20 +3,20 @@
 <h4>If you finished successfully all previous steps you should have 3 virtual machines with Ubuntu, kubernetes and docker installed.</h4>
 <h4>For cluster creation kubeadm command is used. First, it pulls images for kubernetes control plane to container runtime (docker in our case) and then initializes the control plane.<h4>
 
-<h4>Control plane will be created on master node, and worker nodes will be joined after all.</h4>
+<h4>1. Control plane will be created on master node, and worker nodes will be joined after all.</h4>
 
 ```sh
 sudo kubeadm config images pull --cri-socket /run/cri-dockerd.sock
 ```
 
-<h4>Check /etc/hosts on master node. It should contain mapping for master-vm</h4>
-<h4>DONT forget to map them to /etc/hosts on the master </h4>
+<h4>2. Check /etc/hosts on master node. It should contain mapping for master-vm</h4>
+<h4>DONT forget to map Workers to /etc/hosts on the master </h4>
 
 ```sh
 cat /etc/hosts
 ```
 
-# Start init command
+# 3.  Start init command
 
 ```sh
 sudo kubeadm init \
@@ -64,7 +64,7 @@ kubeadm join master-vm:6443 --token e8r3yb.it74vseuaxlzjlzp \
  --discovery-token-ca-cert-hash sha256:a43e08f52250a63486dd373cd50756a2ac0e90b62fbf0031a5e386f3d7e4f816
 ```
 
-<h4>Don’t forget to copy /etc/kubernetes/admin.conf to your home directory and to home directory on your master node as described in master-vm.log</h4>
+<h4>4. Don’t forget to copy /etc/kubernetes/admin.conf to your home directory and to home directory on your master node as described in master-vm.log</h4>
 
 ```sh
   mkdir -p $HOME/.kube
@@ -73,7 +73,7 @@ kubeadm join master-vm:6443 --token e8r3yb.it74vseuaxlzjlzp \
 ```
 <h4>To copy /etc/kubernetes/admin.conf to your local computer you can use shared directory.</h4>
 
-# Configure Kubernetes cluster network.
+# 5. Configure Kubernetes cluster network.
 <h4>For communication between different nodes in cluster another CNI plugin is required. I chose Flannel for my cluster.</h4>
 Flannel git page: https://github.com/flannel-io/flannel
 
@@ -96,7 +96,7 @@ cat kube-flannel.yaml
     }
 ```
 
-<h4>Finally, execute kubectl command</h4>
+<h4>6. Finally, execute kubectl command</h4>
 
 ```sh
 kubectl apply -f kube-flannel.yml
@@ -130,7 +130,7 @@ kubectl get pods -n kube-flannel
 In log file of kubeadm init command (master-vm.log) there is already a join command to use to join worker node to cluster.</h4>
 
 <h2>kubeadm join requires a special token. It expires in 24 hours</h2>
-To generate new token use:
+To generate new token on master use:
 
 ```sh
 kubeadm token create --print-join-command
@@ -139,7 +139,7 @@ kubeadm token create --print-join-command
   
 <h4>Do not forget to add IP mapping for master-vm in /etc/hosts on all you worker nodes</h4>
 
-<h4>We will have to append this line to the join command --cri-socket unix:///var/run/cri-dockerd.sock</h4>
+<h4>7. We will have to append this line to the join command --cri-socket unix:///var/run/cri-dockerd.sock</h4>
 
 
 ```sh

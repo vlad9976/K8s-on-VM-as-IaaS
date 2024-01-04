@@ -1,8 +1,10 @@
 # Nginx Ingress Controller Setup
 
 <img src="/img/icons8-nginx-accelerates-content-and-application-delivery-improves-security-96.png" width="180" height="180">
-
+Nginx Documentation: https://docs.nginx.com/nginx-ingress-controller/<br>
+<br>
 Let’s define a namespace named ingress-nginx where Deployment and Ingress Controller will work together
+
 
 ```sh
 kubectl create namespace ingress-nginx
@@ -108,4 +110,4 @@ Output:
 
 <img src="./images/Screenshot_8.png" width="600" height="200">
 
-# 🥳🥳Congratulation🥳🥳 You have been created kubernetes cluster on on-premises environment and integrated Metallb and deploy nginx ingress.
+# 🥳🥳Congratulation🥳🥳 You have been created kubernetes cluster on on-premises environment and integrated Metallb and deployed nginx ingress.
