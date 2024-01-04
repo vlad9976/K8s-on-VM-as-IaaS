@@ -44,7 +44,7 @@ Output should be similler to this:
 
 The installation manifest does not include a configuration file. MetalLB’s components although will start, they will remain idle until we provide the required configuration as an IpAddressPool.
 
-Let’s name it ipaddresspool.yaml:
+<img src="/img/icons8-file-96.png" width="30" height="30"> Let’s name it ipaddresspool.yaml:
 
 ```sh
 apiVersion: metallb.io/v1beta1
