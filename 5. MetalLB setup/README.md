@@ -36,4 +36,4 @@ kubectl get all --namespace metallb-system
 ```
 Output should be similler to this:
 
-<img src="./images/Screenshot_1.png" width="1000" height="120">
+<img src="./images/Screenshot_1.png" width="900" height="400">
