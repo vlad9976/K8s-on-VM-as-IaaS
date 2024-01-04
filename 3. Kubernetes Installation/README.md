@@ -144,7 +144,7 @@ lsmod | grep overlay
 sysctl net.bridge.bridge-nf-call-iptables net.bridge.bridge-nf-call-ip6tables net.ipv4.ip_forward
 ```
 
-# 9. Setup worker nodes.
+# 9. Setup worker nodes 👾👾.
 
 <h4>Master node setup is completed and it’s time to create a cluster. However, it would be better to configure worker nodes on this step before going further.</h4>
   
