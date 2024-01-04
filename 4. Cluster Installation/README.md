@@ -185,4 +185,4 @@ kubectl logs kube-flannel-ds-7nhwn -n kube-flannel
 ```
 
  # [Continue to MetalLB setup Installation][PlDa]
- 
+ [PlDa]:<../5. MetalLB setup/README.md>
