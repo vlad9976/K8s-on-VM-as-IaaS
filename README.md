@@ -3,9 +3,7 @@
 <h5>We will create kubernetes cluster on Ubuntu Server 22.04 LTS<br>Using virtualbox and deploying Metallb LoadBalancer and Nginx ingress controller</h5>
 
 # <h3>Steps in short</h3>
-1. Spin 3 Virtual machines <br>
-   1.1 Master Node 🤖<br> 
-   1.2 Worker Nodes(2) 👾👾
+1. Spin 3 Virtual machines👾👾<br>
    
 2. Install Kubernetes cluster 1.25.4 version🕸️ <br>
    2.1 Install kubelet 1.25.4-00 🚤<br>
