@@ -155,7 +155,7 @@ kubectl get node
 or
 kubectl get node -o wide
 ```
-# Check cluster setup
+# ✅ Check cluster setup
 <h4>By default kubernetes uses default namespace. For system pods it uses kube-system, flannel uses kube-flannel. To get all pods from all namespaces you can use</h4>
 
 ```sh
