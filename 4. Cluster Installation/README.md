@@ -130,7 +130,7 @@ kubectl get pods -n kube-flannel
 <h4>As soon as Flannel installed, everything is ready to join worker nodes to cluster to finish setup.
 In log file of kubeadm init command (master-vm.log) there is already a join command to use to join worker node to cluster.</h4>
 
-<h2>kubeadm join requires a special token. It expires in 24 hours</h2>
+<h2>kubeadm join requires a special token<img src="/img/icons8-access-64.png" width="20" height="20">. It expires in 24 hours</h2>
 To generate new token on master use:
 
 ```sh
