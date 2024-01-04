@@ -99,7 +99,7 @@ kubectl get svc
 
 Output:
 
-<img src="./images/Screenshot_2.png" width="900" height="100">
+<img src="./images/Screenshot_4.png" width="900" height="100">
 
  let’s scale our deployment in order to see the load-balancing effect clearer
 
@@ -110,5 +110,8 @@ kubectl scale --replicas=3 deployment nginx-server
 Let’s try to call the load-balanced endpoint now:
 
 ```sh
-curl http://192.168.13.247
+for i in {1..5}; do curl http://192.168.13.247; done
 ```
+
+Output:
+
