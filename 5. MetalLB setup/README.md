@@ -9,6 +9,7 @@ Without MetalLB or any similar software solution the External IP of any new crea
 # Installation
 The installation of MetalLB is easy we are going to perform it by applying the necessary manifests (everything will be provisioned in a new namespace named metallb-system)
 
+
 ```sh
 kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.13.7/config/manifests/metallb-native.yaml
 ```
