@@ -28,7 +28,7 @@
 
 # <h4>8. I chose network interface "Intel(R) Wi-Fi 6 AX201 160MHz". Let’s check such interface exists in my network run ipconfig /all. My desktop is running on Windows 10</h4>
 <img src="images/Screenshot_10.png" width="500" height="250">
-<h4>my IP address is 192.168.1.219 in 192.168.1.0/24 subnet.</h4>
+<h4>my IP address is 192.168.13.219 in 192.168.13.0/24 subnet.</h4>
 
 # <h4>9. I also suggest to configure a shared folder, because it’s very helpful to use bash scripts during setup</h4>
 <img src="images/Screenshot_12.png" width="500" height="250">
