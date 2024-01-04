@@ -183,3 +183,6 @@ All pods should running fine.</h4>
 kubectl describe pod kube-flannel-ds-7nhwn -n kube-flannel
 kubectl logs kube-flannel-ds-7nhwn -n kube-flannel
 ```
+
+ # [Continue to MetalLB setup Installation][PlDa]
+ 
