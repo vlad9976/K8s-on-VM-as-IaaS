@@ -21,7 +21,7 @@
 # Now proceed with installation and wait until Ubuntu is successfully installed on your virtual machine
 
 
-# <h3> Finally🥳, installer will ask you to reboot your machine, so after restart login and let’s check that everything goes right way</h3>
+# <h4> Finally🥳, installer will ask you to reboot your machine, so after restart login and let’s check that everything goes right way</h4>
 
 # Check Ubuntu installation.
 Check access to you local computer from master node<br>
@@ -37,7 +37,7 @@ Finally, you can check available network interfaces.<br>
     ip a 
 </br>
 
-<h3> If all checks were successfully passed you are ready to install docker and kubernetes on your virtual machine</h3>
+<h4> If all checks were successfully passed you are ready to install docker and kubernetes on your virtual machine</h4>
 
 # [Continue to K8s Installation][PlDa]
 [PlDa]:<../Kubernetes Installation/README.md>
