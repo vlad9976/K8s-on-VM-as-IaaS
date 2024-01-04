@@ -16,7 +16,7 @@ sudo kubeadm config images pull --cri-socket /run/cri-dockerd.sock
 cat /etc/hosts
 ```
 
-#3.  Start init command
+# 3.  Start init command
 
 ```sh
 sudo kubeadm init \
@@ -73,7 +73,7 @@ kubeadm join master-vm:6443 --token e8r3yb.it74vseuaxlzjlzp \
 ```
 <h4>To copy /etc/kubernetes/admin.conf to your local computer you can use shared directory.</h4>
 
-#5. Configure Kubernetes cluster network.
+# 5. Configure Kubernetes cluster network.
 <h4>For communication between different nodes in cluster another CNI plugin is required. I chose Flannel for my cluster.</h4>
 Flannel git page: https://github.com/flannel-io/flannel
 
