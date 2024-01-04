@@ -1,4 +1,4 @@
-# Ubuntu Server 22.04.3 installation
+# <img src="../img/icons8-ubuntu-96.png" width="20" height="20"> Ubuntu Server 22.04.3 installation
 
 # <h4>1. Start <img src="../img/icons8-start-96.png" width="20" height="20"> your virtual machine.</h4>
 <img src="images/Screenshot_12.png" width="600" height="150">
@@ -15,7 +15,7 @@
 # <h4>5. Choose you username/password and server name</h4>
 <img src="images/Screenshot_5.png" width="800" height="600">
 
-# <h4>6. You can also install OpenSSH to connect to your virtual machine by ssh</h4>
+# <h4>6. You can also install OpenSSH <img src="../img/icons8-ssh-96.png" width="20" height="20"> to connect to your virtual machine by ssh</h4>
 <img src="images/Screenshot_6.png" width="800" height="600">
 
 # <h4>Now proceed with installation and wait⏳ until Ubuntu is successfully installed on your virtual machine</h4>
