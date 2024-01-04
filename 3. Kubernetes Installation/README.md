@@ -50,7 +50,7 @@ sudo apt-mark hold kubelet kubeadm kubectl
 kubectl version --output=yaml
 kubeadm version --output=yaml
 ```
-# 5. <img src="images/icons8-docker-96.png" width="40" height="40"> Install docker
+# 5. <img src="/img/icons8-docker-96.png" width="40" height="40"> Install docker
 
 <h4>I’m going to use Docker as a container runtime for kubernetes in my cluster</h4>
 <h4>To make in complaint with kubernetes I will use Mirantis. It’s an adapter for Docker Engine to implement CRI interfaces</h4>
