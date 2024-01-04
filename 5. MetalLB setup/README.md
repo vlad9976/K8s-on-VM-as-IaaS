@@ -17,7 +17,7 @@ kubectl create deployment hello-server --image=gcr.io/google-samples/hello-app:1
 kubectl expose deployment hello-server --type LoadBalancer --port 80 --target-port 8080
 kubectl get svc
 ```
-# output
+# <img src="/img/icons8-output-96.png" width="30" height="30"> output
 <img src="./images/Screenshot_3.png" width="1000" height="120">
 
 # <img src="/img/icons8-install-64.png" width="30" height="30"> Installation
