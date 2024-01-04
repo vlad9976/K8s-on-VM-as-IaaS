@@ -135,9 +135,9 @@ To generate new token use:
 ```sh
 kubeadm token create --print-join-command
 ```
-<h4>Now you can connect to your worker nodes and join the cluster.</h4><br>
+<h4>Now you can connect to your worker nodes and join the cluster.</h4>
   
-<h4>Do not forget to add IP mapping for master-vm in /etc/hosts on all you worker nodes</h4><br>
+<h4>Do not forget to add IP mapping for master-vm in /etc/hosts on all you worker nodes</h4>
 
 <h4>We will have to append this line to the join command --cri-socket unix:///var/run/cri-dockerd.sock</h4>
 
