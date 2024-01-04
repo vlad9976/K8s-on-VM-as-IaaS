@@ -37,3 +37,18 @@ kubectl get all --namespace metallb-system
 Output should be similler to this:
 
 <img src="./images/Screenshot_1.png" width="900" height="400">
+
+The installation manifest does not include a configuration file. MetalLB’s components although will start, they will remain idle until we provide the required configuration as an IpAddressPool.
+
+Let’s name it ipaddresspool.yaml:
+
+```sh
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: default-pool
+  namespace: metallb-system
+spec:
+  addresses:
+  - 192.168.1.240-192.168.1.250
+```
