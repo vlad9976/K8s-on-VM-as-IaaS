@@ -10,6 +10,7 @@ sudo kubeadm config images pull --cri-socket /run/cri-dockerd.sock
 ```
 
 <h4>Check /etc/hosts on master node. It should contain mapping for master-vm</h4>
+<h4>DONT forget to map them to /etc/hosts on the master </h4>
 
 ```sh
 cat /etc/hosts
@@ -30,6 +31,7 @@ sudo kubeadm init \
 <h4>Installation may take some time and you can check master-vm.log file.</h4>
 
 ```sh
+# cat master-vm.log
 Your Kubernetes control-plane has initialized successfully!
 
 To start using your cluster, you need to run the following as a regular user:
@@ -73,6 +75,7 @@ kubeadm join master-vm:6443 --token e8r3yb.it74vseuaxlzjlzp \
 
 # Configure Kubernetes cluster network.
 <h4>For communication between different nodes in cluster another CNI plugin is required. I chose Flannel for my cluster.</h4>
+Flannel git page: https://github.com/flannel-io/flannel
 
 ```sh
 wget https://raw.githubusercontent.com/flannel-io/flannel/master/Documentation/kube-flannel.yml
@@ -132,17 +135,19 @@ To generate new token use:
 ```sh
 kubeadm token create --print-join-command
 ```
-<h4>Now you can connect to your worker nodes and join the cluster.<br>
-Do not forget to add IP mapping for master-vm in /etc/hosts on all you worker nodes<br>
-We will have to append this line to the join command --cri-socket unix:///var/run/cri-dockerd.sock
-</h4>
+<h4>Now you can connect to your worker nodes and join the cluster.</h4>
+  
+<h4>Do not forget to add IP mapping for master-vm in /etc/hosts on all you worker nodes</h4>
+
+<h4>We will have to append this line to the join command --cri-socket unix:///var/run/cri-dockerd.sock</h4>
+
 
 ```sh
 kubeadm join k8smaster:6443 --token e8r3yb.it74vseuaxlzjlzp \
 --discovery-token-ca-cert-hash sha256:a43e08f52250a63486dd373cd50756a2ac0e90b62fbf0031a5e386f3d7e4f816 --cri-socket unix:///var/run/cri-dockerd.sock
 ```
 
-# Wait for a while and you can check the installation using kubectl
+<h2>Wait for a while and you can check the installation using kubectl</h2>
 
 ```sh
 kubectl get node
@@ -178,3 +183,6 @@ All pods should running fine.</h4>
 kubectl describe pod kube-flannel-ds-7nhwn -n kube-flannel
 kubectl logs kube-flannel-ds-7nhwn -n kube-flannel
 ```
+
+ # [Continue to MetalLB setup Installation][PlDa]
+ [PlDa]:<../5. MetalLB setup/README.md>
