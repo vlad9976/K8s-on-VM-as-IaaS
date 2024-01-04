@@ -18,5 +18,5 @@ we need to provide the components required by MetalLB. The next manifest will de
 ```sh
 1. the metallb-system/controller deployment. A cluster-wide controller that handles IP assignments.
 2. the metallb-system/speaker which is a daemonset. That is the component to make the services reachable.
-3.  the service accounts for the controller and speaker, along with the RBAC permissions that the components require.
+3. the service accounts for the controller and speaker, along with the RBAC permissions that the components require.
 ```
