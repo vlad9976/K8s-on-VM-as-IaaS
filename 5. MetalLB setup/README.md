@@ -13,7 +13,7 @@ kubectl create deployment nginx-server --image=nginx
 kubectl expose deployment nginx-server --type LoadBalancer --port 80 --target-port 8080
 ```
 # output
-<img src="./images/Screenshot_3.png" width="1000" height="180">
+<img src="./images/Screenshot_3.png" width="1000" height="120">
 
 # Installation
 The installation of MetalLB is easy we are going to perform it by applying the necessary manifests (everything will be provisioned in a new namespace named metallb-system)
