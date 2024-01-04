@@ -98,7 +98,7 @@ curl www.exaple.com
 
 Output:
 
-<img src="./images/Screenshot_7.png" width="600" height="20">
+<img src="./images/Screenshot_7.png" width="600" height="200">
 
 
 
