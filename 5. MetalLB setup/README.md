@@ -57,7 +57,7 @@ We are going to use Layer 2 configuration:
 Documentation:
 Layer 2 mode does not require the IPs to be bound to the network interfaces of your worker nodes. It works by responding to ARP requests on your local network directly, to give the machine’s MAC address to clients.
 
-In this example I am going to bind MetalLB with the addresses from192.168.13.240 to 192.168.13.250of my home network.
+In this example I am going to bind MetalLB with the addresses from192.168.13.240 to 192.168.13.250 of my home network.
 
 IMPORTANT❗: Make sure you exclude this slice from the address pool of your DHCP server, otherwise you will run into troubles.
 
@@ -115,3 +115,4 @@ for i in {1..5}; do curl http://192.168.13.247; done
 
 Output:
 
+<img src="./images/Screenshot_5.png" width="900" height="400">
