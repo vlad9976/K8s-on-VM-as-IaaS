@@ -12,6 +12,8 @@ Without MetalLB or any similar software solution the External IP of any new crea
 kubectl create deployment nginx-server --image=nginx
 kubectl expose deployment nginx-server --type LoadBalancer --port 80 --target-port 8080
 ```
+# output
+<img src="/images/Screenshot_3" width="180" height="180">
 
 # Installation
 The installation of MetalLB is easy we are going to perform it by applying the necessary manifests (everything will be provisioned in a new namespace named metallb-system)
