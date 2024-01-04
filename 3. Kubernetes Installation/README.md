@@ -19,7 +19,7 @@ reboot
 ```
 Your share folder will be in /media/sf<your_folder>
 
-#3. Disable Swap
+# 3. Disable Swap
 
 ```sh
 sudo sed -i '/\sswap\s/s/^/#/' /etc/fstab
@@ -29,7 +29,7 @@ free -h
 <h4>Should look like this</h4>
 <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*XFIwxWHc9SMMXMcWb65-GQ.png" width="500" height="30">
 
-#4. Install kubernetes
+# 4. Install kubernetes
 <h4>Now it’s time to install kubernetes itself on the master node. I made my cluster set up for 1.25.4 version</h4>
 <h4>I’m going to put all required commands to k8s.sh file to run it in master node, and worker nodes after all</h4>
 
@@ -50,7 +50,7 @@ sudo apt-mark hold kubelet kubeadm kubectl
 kubectl version --output=yaml
 kubeadm version --output=yaml
 ```
-#5. Install docker
+# 5. Install docker
 
 <h4>I’m going to use Docker as a container runtime for kubernetes in my cluster</h4>
 <h4>To make in complaint with kubernetes I will use Mirantis. It’s an adapter for Docker Engine to implement CRI interfaces</h4>
@@ -83,7 +83,7 @@ EOF
 docker --version
 ```
 
-#6. To finish Docker setup for kubernetes let’s install Mirantis
+# 6. To finish Docker setup for kubernetes let’s install Mirantis
 
 ```sh
 #mirantis.sh
@@ -112,7 +112,7 @@ cri-dockerd --version
 systemctl status cri-docker.socket
 ```
 
-#7. Configure Kubernetes prerequisites.
+# 7. Configure Kubernetes prerequisites.
 <h4>Documentation: https://kubernetes.io/docs/setup/production-environment/container-runtimes/</h4>
 
 I created prerequisites.sh based on documentation
@@ -136,7 +136,7 @@ EOF
 sudo sysctl --system
 ```
 
-#8. Run the script and check setup was correctly applied.
+# 8. Run the script and check setup was correctly applied.
 
 ```sh
 lsmod | grep br_netfilter
@@ -144,7 +144,7 @@ lsmod | grep overlay
 sysctl net.bridge.bridge-nf-call-iptables net.bridge.bridge-nf-call-ip6tables net.ipv4.ip_forward
 ```
 
-#9. Setup worker nodes.
+# 9. Setup worker nodes.
 
 <h4>Master node setup is completed and it’s time to create a cluster. However, it would be better to configure worker nodes on this step before going further.</h4>
   
