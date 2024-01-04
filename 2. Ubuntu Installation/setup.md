@@ -6,7 +6,7 @@
 # <h4>installe Ubuntu Server</h4>
 <img src="images/Screenshot_2.png" width="800" height="600">
 
-# <h4>Bridge network adapter generated IP 192.168.13.242 for new VM</h4>
+# <h4>Bridge network adapter generated IP 192.168.13.242 for new VM (Your ip would be similer to your network ip range)</h4>
 <img src="images/Screenshot_3.png" width="800" height="600">
 
 # <h4>There is no need to use LVM groups, so you can skip it</h4>
