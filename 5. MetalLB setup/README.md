@@ -11,7 +11,7 @@ Without MetalLB or any similar software solution the External IP of any new crea
 ```sh
 kubectl create deployment nginx-server --image=nginx
 kubectl expose deployment nginx-server --type LoadBalancer --port 80 --target-port 8080
-kubectl get pods
+kubectl get svc
 ```
 # output
 <img src="./images/Screenshot_3.png" width="1000" height="120">
@@ -88,15 +88,27 @@ kubectl apply -f l2advertisement.yaml
 # Remove old deployment and service.
 kubectl delete deployment nginx-server
 kubectl delete svc nginx-server
-kubectl get pods
+kubectl get svc
 
 # Create new
 
 kubectl create deployment nginx-server --image=nginx
 kubectl expose deployment nginx-server --type LoadBalancer --port 80 --target-port 8080
-kubectl get pods
+kubectl get svc
 ```
 
 Output:
 
 <img src="./images/Screenshot_2.png" width="900" height="100">
+
+ let’s scale our deployment in order to see the load-balancing effect clearer
+
+ ```sh
+kubectl scale --replicas=3 deployment nginx-server
+```
+
+Let’s try to call the load-balanced endpoint now:
+
+```sh
+curl http://192.168.15.240
+```
