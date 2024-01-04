@@ -75,7 +75,7 @@ kubeadm join master-vm:6443 --token e8r3yb.it74vseuaxlzjlzp \
 
 # 5.<img src="../img/icons8-network-65.png" width="40" height="40"> Configure Kubernetes cluster network.
 <h4>For communication between different nodes in cluster another CNI plugin is required. I chose Flannel for my cluster.</h4>
-<img src="/img/flannel.svg" width="40" height="40">Flannel git page: https://github.com/flannel-io/flannel
+<img src="/img/flannel.svg" width="40" height="40"> Flannel git page: https://github.com/flannel-io/flannel
 
 ```sh
 wget https://raw.githubusercontent.com/flannel-io/flannel/master/Documentation/kube-flannel.yml
