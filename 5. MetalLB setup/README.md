@@ -52,3 +52,9 @@ spec:
   addresses:
   - 192.168.1.240-192.168.1.250
 ```
+We are going to use Layer 2 configuration:
+Documentation:
+
+```
+Layer 2 mode does not require the IPs to be bound to the network interfaces of your worker nodes. It works by responding to ARP requests on your local network directly, to give the machine’s MAC address to clients.
+```
