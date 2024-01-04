@@ -90,4 +90,15 @@ Map in your /etc/hosts file the domain we choose "www.example.com" to LoadBalanc
 
 <img src="./images/Screenshot_6.png" width="600" height="20">
 
+# Test Ingress.
+
+```sh
+curl www.exaple.com
+```
+
+Output:
+
+<img src="./images/Screenshot_7.png" width="600" height="20">
+
+
 
