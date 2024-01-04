@@ -33,3 +33,61 @@ spec:
           ports:
             - containerPort: 8080
 ```
+Lets create an Ingress:
+
+```sh
+# ingress.yaml
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nginx-ingress-example
+  namespace: ingress-nginx
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+    - host: www.example.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: hello-server
+                port:
+                  number: 80
+
+```
+
+Lets create a Service:
+
+```sh
+#service.yaml
+
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: hello-server
+  name: hello-server
+  namespace: ingress-nginx
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: hello-server
+  type: LoadBalancer
+status:
+  loadBalancer: {}
+
+```
+
+Map in your /etc/hosts file the domain we choose "www.example.com" to LoadBalancer IP
+
+
+
+
