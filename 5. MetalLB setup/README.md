@@ -9,8 +9,8 @@ Without MetalLB or any similar software solution the External IP of any new crea
 # Example Try:
 
 ```sh
-kubectl create deployment nginx-server --image=nginx
-kubectl expose deployment nginx-server --type LoadBalancer --port 80 --target-port 8080
+kubectl create deployment hello-server --image=gcr.io/google-samples/hello-app:1.0
+kubectl expose deployment hello-server --type LoadBalancer --port 80 --target-port 8080
 kubectl get svc
 ```
 # output
@@ -86,14 +86,14 @@ kubectl apply -f l2advertisement.yaml
 
 ```sh
 # Remove old deployment and service.
-kubectl delete deployment nginx-server
-kubectl delete svc nginx-server
+kubectl delete deployment hello-server
+kubectl delete svc hello-server
 kubectl get svc
 
 # Create new
 
-kubectl create deployment nginx-server --image=nginx
-kubectl expose deployment nginx-server --type LoadBalancer --port 80 --target-port 8080
+kubectl create deployment hello-server --image=gcr.io/google-samples/hello-app:1.0
+kubectl expose deployment hello-server --type LoadBalancer --port 80 --target-port 8080
 kubectl get svc
 ```
 
@@ -110,5 +110,5 @@ kubectl scale --replicas=3 deployment nginx-server
 Let’s try to call the load-balanced endpoint now:
 
 ```sh
-curl http://192.168.15.240
+curl http://192.168.13.247
 ```
