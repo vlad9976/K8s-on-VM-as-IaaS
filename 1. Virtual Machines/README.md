@@ -17,10 +17,10 @@
 <img src="images/Screenshot_3.png" width="700" height="350">
 <h4>Press “Next” and finish set up.</h4>
 
-# <h4>5. Shutdown the new create vm to configure network</h4>
+# <h4>5. Shutdown <img src="../img/icons8-shutdown-96.png" width="20" height="20"> the new create vm to configure network</h4>
 <img src="images/Screenshot_9.png" width="400" height="100">
 
-# <h4>6. Choose “Settings”</h4>
+# <h4>6. Choose “Settings” <img src="../img/icons8-settings-96.png" width="20" height="20"></h4>
 <img src="images/Screenshot_4.png" width="600" height="100">
 
 # <h4>7. Go to “Network” and choose “Bridge Adapter” as a network interface. With this option your virtual machine will be in the same network as you computer and will get access to internet</h4>
