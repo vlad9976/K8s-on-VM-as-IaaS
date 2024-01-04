@@ -10,7 +10,7 @@
 # <h4>2. In the opening form type new virtual machine name and choose the path where VM data will be stored.</h4>
 <img src="images/Screenshot_1.png" width="700" height="400">
 
-# <h4>3. Now press “Next” and configure CPU <img src="../img/cpu-tower.png" width="700" height="350"> and memory resources. I would suggest at least 2 CPU and 2G RAM.</h4>
+# <h4>3. Now press “Next” and configure CPU <img src="../img/icons8-cpu-96.png" width="20" height="20"> and memory resources. I would suggest at least 2 CPU and 2G RAM.</h4>
 <img src="images/Screenshot_2.png" width="700" height="350">
 
 # <h4>4. Configuration of disk space resources. For master node we will set 20GB disk and 50GB for each worker node </h4>
