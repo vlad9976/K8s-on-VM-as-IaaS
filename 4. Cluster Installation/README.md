@@ -31,6 +31,7 @@ sudo kubeadm init \
 <h4>Installation may take some time and you can check master-vm.log file.</h4>
 
 ```sh
+# cat master-vm.log
 Your Kubernetes control-plane has initialized successfully!
 
 To start using your cluster, you need to run the following as a regular user:
