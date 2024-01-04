@@ -27,9 +27,9 @@
 
 6. Join worker nodes 🔌<br>
 
-7. Check cluster setup 🔍
+7. Deploy Metallb
 
-8. 
+8. Deploy Nginx ingress
 
 # Requirments
 VirtualBox📦
