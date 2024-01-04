@@ -99,4 +99,4 @@ kubectl get pods
 
 Output:
 
-<img src="./images/Screenshot_2.png" width="900" height="400">
+<img src="./images/Screenshot_2.png" width="900" height="100">
