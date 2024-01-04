@@ -82,3 +82,13 @@ Now let’s deploy these manifests:
 kubectl apply -f ipaddresspool.yaml
 kubectl apply -f l2advertisement.yaml
 ```
+# Take it for a test
+
+```sh
+kubectl create deployment nginx-server --image=nginx
+kubectl expose deployment nginx-server --type LoadBalancer --port 80 --target-port 8080
+kubectl get pods
+```
+
+Output:
+
