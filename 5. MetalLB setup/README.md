@@ -115,3 +115,4 @@ for i in {1..5}; do curl http://192.168.13.247; done
 
 Output:
 
+<img src="./images/Screenshot_5.png" width="900" height="400">
