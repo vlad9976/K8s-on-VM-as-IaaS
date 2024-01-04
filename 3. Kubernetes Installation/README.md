@@ -29,7 +29,7 @@ free -h
 <h4>Should look like this</h4>
 <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*XFIwxWHc9SMMXMcWb65-GQ.png" width="500" height="30">
 
-# 4. Install kubernetes
+# 4. <img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/kubernetes-icon.svg" alt="Kubernetes" height="35" /> Install kubernetes
 <h4>Now it’s time to install kubernetes itself on the master node. I made my cluster set up for 1.25.4 version</h4>
 <h4>I’m going to put all required commands to k8s.sh file to run it in master node, and worker nodes after all</h4>
 
@@ -50,7 +50,7 @@ sudo apt-mark hold kubelet kubeadm kubectl
 kubectl version --output=yaml
 kubeadm version --output=yaml
 ```
-# 5. Install docker
+# 5. <img src="images/icons8-docker-96.png" width="40" height="40"> Install docker
 
 <h4>I’m going to use Docker as a container runtime for kubernetes in my cluster</h4>
 <h4>To make in complaint with kubernetes I will use Mirantis. It’s an adapter for Docker Engine to implement CRI interfaces</h4>
