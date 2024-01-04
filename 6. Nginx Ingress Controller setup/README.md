@@ -100,5 +100,12 @@ Output:
 
 <img src="./images/Screenshot_7.png" width="500" height="100">
 
+```sh
+for i in {1..5}; do curl www.example.com; done
+```
 
+Output:
 
+<img src="./images/Screenshot_8.png" width="600" height="200">
+
+# 🥳🥳Congratulation🥳🥳 You have been created kubernetes cluster on on-premises environment and integrated Metallb and deploy nginx ingress.
