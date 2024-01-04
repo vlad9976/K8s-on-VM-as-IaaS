@@ -10,7 +10,7 @@
 
 # <h3>Steps in short</h3>
 1. Spin 3 Virtual machines<br>
-   1.1 Master 🤖
+   1.1 Master 🤖<br>
    1.2 Worker 👾👾
 3. Install Kubernetes cluster 1.25.4 version🕸️ <br>
    2.1 Install kubelet 1.25.4-00 🚤<br>
