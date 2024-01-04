@@ -88,6 +88,6 @@ status:
 
 Map in your /etc/hosts file the domain we choose "www.example.com" to LoadBalancer IP
 
-<img src="./images/Screenshow_6.png" width="180" height="180">
+<img src="./images/Screenshot_6.png" width="180" height="180">
 
 
