@@ -3,7 +3,7 @@
 <br>
 <h2>Kubernetes Cluster on Ubuntu Server 22.04 LTS🚀(Virtualbox📦)</h2>
 <h3>😅 Why K8s? Because between the K and the S there are 8 letters.</h3>
-<h5>We will create kubernetes cluster on Ubuntu Server 22.04 LTS<br>Using virtualbox and deploying Metallb LoadBalancer and Nginx ingress controller</h5>
+<h4>We will create kubernetes cluster on Ubuntu Server 22.04 LTS<br>Using virtualbox and deploying Metallb LoadBalancer and Nginx ingress controller</h4>
 
 
 # <h3>Steps in short</h3>
