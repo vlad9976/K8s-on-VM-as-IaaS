@@ -108,4 +108,4 @@ Output:
 
 <img src="./images/Screenshot_8.png" width="600" height="200">
 
-# 🥳🥳Congratulation🥳🥳 You have been created kubernetes cluster on on-premises environment and integrated Metallb and deploy nginx ingress.
+# 🥳🥳Congratulation🥳🥳 You have been created kubernetes cluster on on-premises environment and integrated Metallb and deployed nginx ingress.
