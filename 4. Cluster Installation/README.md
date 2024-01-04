@@ -73,7 +73,7 @@ kubeadm join master-vm:6443 --token e8r3yb.it74vseuaxlzjlzp \
 ```
 <h4>To copy /etc/kubernetes/admin.conf to your local computer you can use shared directory.</h4>
 
-# 5.<img src="../img/icons8-network-65.png" width="40" height="40"> Configure Kubernetes cluster network.
+# 5. <img src="../img/icons8-network-65.png" width="40" height="40"> Configure Kubernetes cluster network.
 <h4>For communication between different nodes in cluster another CNI plugin is required. I chose Flannel for my cluster.</h4>
 
 <img src="/img/flannel.svg" width="30" height="30"> Flannel git page: https://github.com/flannel-io/flannel
@@ -130,7 +130,7 @@ kubectl get pods -n kube-flannel
 <h4>As soon as Flannel installed, everything is ready to join worker nodes to cluster to finish setup.
 In log file of kubeadm init command (master-vm.log) there is already a join command to use to join worker node to cluster.</h4>
 
-<h2>kubeadm join requires a special token<img src="/img/icons8-access-64.png" width="30" height="30">. It expires in 24 hours</h2>
+<h2>kubeadm join requires a special token <img src="/img/icons8-access-64.png" width="30" height="30"> . It expires in 24 hours</h2>
 To generate new token on master use:
 
 ```sh
