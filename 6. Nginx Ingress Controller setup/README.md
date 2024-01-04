@@ -3,7 +3,7 @@
 <img src="/img/icons8-nginx-accelerates-content-and-application-delivery-improves-security-96.png" width="180" height="180">
 Nginx Documentation: https://docs.nginx.com/nginx-ingress-controller/<br>
 <br>
-<img src="./images/0_DJNFUH_Bx-tKHZsj.png" width="580" height="580">
+<img src="./images/0_DJNFUH_Bx-tKHZsj.png" width="580" height="610">
 
 Let’s define a namespace named ingress-nginx where Deployment and Ingress Controller will work together
 
