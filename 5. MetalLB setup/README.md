@@ -85,6 +85,13 @@ kubectl apply -f l2advertisement.yaml
 # Take it for a test
 
 ```sh
+# Remove old deployment and service.
+kubectl delete deployment nginx-server
+kubectl delete svc nginx-server
+kubectl get pods
+
+# Create new
+
 kubectl create deployment nginx-server --image=nginx
 kubectl expose deployment nginx-server --type LoadBalancer --port 80 --target-port 8080
 kubectl get pods
