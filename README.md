@@ -1,4 +1,4 @@
-<a href="https://kubernetes.io/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/kubernetes-icon.svg" alt="Kubernetes" height="50" /></a> Kubernetes Cluster on Ubuntu Server 22.04 LTS🚀(Virtualbox📦)
+<a href="https://kubernetes.io/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/kubernetes-icon.svg" alt="Kubernetes" height="30" /></a> Kubernetes Cluster on Ubuntu Server 22.04 LTS🚀(Virtualbox📦)
 <h3>😅 Why K8s? Because between the K and the S there are 8 letters.</h3>
 <h5>We will create kubernetes cluster on Ubuntu Server 22.04 LTS<br>Using virtualbox and deploying Metallb LoadBalancer and Nginx ingress controller</h5>
 
