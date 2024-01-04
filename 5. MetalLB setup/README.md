@@ -4,7 +4,7 @@
 
 Metallb Documentation: https://metallb.universe.tf/
 
-<img src="/images/0_-yEG9iR9SS23Z4F0.png" width="180" height="180">
+<img src="./images/0_-yEG9iR9SS23Z4F0.png" width="180" height="180">
 
 # Set up a MetalLB Load Balancer on a on-premises Kubernetes Cluster
 
