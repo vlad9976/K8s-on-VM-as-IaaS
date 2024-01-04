@@ -36,4 +36,67 @@ kubectl get all --namespace metallb-system
 ```
 Output should be similler to this:
 
-<img src="./images/Screenshot_1.png" width="1000" height="120">
+<img src="./images/Screenshot_1.png" width="900" height="400">
+
+The installation manifest does not include a configuration file. MetalLB’s components although will start, they will remain idle until we provide the required configuration as an IpAddressPool.
+
+Let’s name it ipaddresspool.yaml:
+
+```sh
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: default-pool
+  namespace: metallb-system
+spec:
+  addresses:
+  - 192.168.13.240-192.168.13.250
+```
+We are going to use Layer 2 configuration:
+
+Documentation:
+Layer 2 mode does not require the IPs to be bound to the network interfaces of your worker nodes. It works by responding to ARP requests on your local network directly, to give the machine’s MAC address to clients.
+
+In this example I am going to bind MetalLB with the addresses from192.168.13.240 to 192.168.13.250of my home network.
+
+IMPORTANT❗: Make sure you exclude this slice from the address pool of your DHCP server, otherwise you will run into troubles.
+
+create an additional manifest and provision an object of type L2Advertisement
+
+Let’s name it l2advertisement.yaml:
+
+```sh
+apiVersion: metallb.io/v1beta1
+kind: L2Advertisement
+metadata:
+  name: default
+  namespace: metallb-system
+spec:
+  ipAddressPools:
+  - default-pool
+```
+
+Now let’s deploy these manifests:
+
+```sh
+kubectl apply -f ipaddresspool.yaml
+kubectl apply -f l2advertisement.yaml
+```
+# Take it for a test
+
+```sh
+# Remove old deployment and service.
+kubectl delete deployment nginx-server
+kubectl delete svc nginx-server
+kubectl get pods
+
+# Create new
+
+kubectl create deployment nginx-server --image=nginx
+kubectl expose deployment nginx-server --type LoadBalancer --port 80 --target-port 8080
+kubectl get pods
+```
+
+Output:
+
+<img src="./images/Screenshot_2.png" width="900" height="400">
