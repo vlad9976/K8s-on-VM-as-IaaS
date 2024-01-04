@@ -11,9 +11,10 @@ Without MetalLB or any similar software solution the External IP of any new crea
 ```sh
 kubectl create deployment nginx-server --image=nginx
 kubectl expose deployment nginx-server --type LoadBalancer --port 80 --target-port 8080
+kubectl get pods
 ```
 # output
-<img src="./images/Screenshot_3.png" width="1000" height="180">
+<img src="./images/Screenshot_3.png" width="1000" height="120">
 
 # Installation
 The installation of MetalLB is easy we are going to perform it by applying the necessary manifests (everything will be provisioned in a new namespace named metallb-system)
@@ -29,3 +30,10 @@ we need to provide the components required by MetalLB. The next manifest will de
 2. the metallb-system/speaker which is a daemonset. That is the component to make the services reachable.
 3. the service accounts for the controller and speaker, along with the RBAC permissions that the components require.
 ```
+
+```sh
+kubectl get all --namespace metallb-system
+```
+Output should be similler to this:
+
+<img src="./images/Screenshot_1.png" width="1000" height="120">
