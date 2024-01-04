@@ -13,3 +13,10 @@ The installation of MetalLB is easy we are going to perform it by applying the n
 ```sh
 kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.13.7/config/manifests/metallb-native.yaml
 ```
+we need to provide the components required by MetalLB. The next manifest will deploy MetalLB to the cluster, in metallb-system namespace we just created. The components are:
+
+```sh
+1. the metallb-system/controller deployment. A cluster-wide controller that handles IP assignments.
+2. the metallb-system/speaker which is a daemonset. That is the component to make the services reachable.
+3.  the service accounts for the controller and speaker, along with the RBAC permissions that the components require.
+```
