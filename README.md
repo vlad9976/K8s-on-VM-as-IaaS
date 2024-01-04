@@ -1,5 +1,5 @@
 <a href="https://kubernetes.io/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/kubernetes-icon.svg" alt="Kubernetes" height="180" /></a> 
-<img src="/img/metallb-icon-color.png" width="180" height="210">
+<img src="/img/metallb-icon-color.png" width="180" height="190">
 <br>
 <h2>Kubernetes Cluster on Ubuntu Server 22.04 LTS🚀(Virtualbox📦)</h2>
 <h3>😅 Why K8s? Because between the K and the S there are 8 letters.</h3>
