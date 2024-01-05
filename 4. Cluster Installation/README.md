@@ -186,5 +186,7 @@ kubectl describe pod kube-flannel-ds-7nhwn -n kube-flannel
 kubectl logs kube-flannel-ds-7nhwn -n kube-flannel
 ```
 
- # [Continue to MetalLB setup Installation][PlDa]
+ [<img src="../img/icons8-next-96.png" width="75" height="75"> <img src="../img/metallb-icon-color.png" width="75" height="75">][PlDb]
+ 
  [PlDa]:<../5. MetalLB setup/README.md>
+
