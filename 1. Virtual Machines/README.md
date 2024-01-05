@@ -1,7 +1,7 @@
 # VirtualBox Master🤖 Workers👾👾 Setup.
 
 <h1>Create virtual machines</h1>
-<h4>Let’s create virtual machines. I will describe the detailed scenario for master node and you can create 2 worker nodes by yourself.</h4>
+<h4>Let’s create virtual machines. I will describe the scenario for master node and you can create 2 worker nodes by yourself.</h4>
 <h4>First, download required images. You can use the following link https://ubuntu.com/download/server to download Ubuntu iso image. </h4>
 
 # <h4>1. Open VirtualBox📦 and choose “New” to start configuration.</h4> 
