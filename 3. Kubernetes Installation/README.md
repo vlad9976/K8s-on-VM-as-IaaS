@@ -4,8 +4,10 @@
 
 <h4>1. First of all go to Devices -> Insert Guest Additions CD image <img src="../img/icons8-cd-40.png" width="40" height="40"></h4>
 <img src="images/Screenshot_11.png" width="800" height="600">
+<br>
 
-2. after Inserting Guest Additions CD image
+<h4>2. after Inserting Guest Additions CD image</h4>
+
 From the terminal, run the following commands:
 
 ```sh
