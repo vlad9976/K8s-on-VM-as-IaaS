@@ -67,7 +67,7 @@ IMPORTANT❗: Make sure you exclude this slice from the address pool of your DHC
 
 create an additional manifest and provision an object of type L2Advertisement
 
-Let’s name it l2advertisement.yaml:
+<img src="/img/icons8-file-96.png" width="30" height="30"> Let’s name it l2advertisement.yaml:
 
 ```sh
 apiVersion: metallb.io/v1beta1
