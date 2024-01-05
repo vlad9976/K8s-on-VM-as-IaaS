@@ -34,6 +34,8 @@
 
 <h4>10. Now save all your settings</h4>
 
+# Continue
+
 [<img src="../img/icons8-next-96.png" width="75" height="75">   <img src="../img/icons8-ubuntu-96.png" width="75" height="75">][PlDa]
 
 [PlDa]:<../2. Ubuntu Installation/setup.md>
