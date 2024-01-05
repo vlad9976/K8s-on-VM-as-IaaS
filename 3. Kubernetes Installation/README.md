@@ -54,7 +54,7 @@ kubeadm version --output=yaml
 
 <h4>I’m going to use Docker as a container runtime for kubernetes in my cluster</h4>
 <h4>To make in complaint with kubernetes I will use Mirantis. It’s an adapter for Docker Engine to implement CRI interfaces</h4>
-Mirantis Documentation: https://docs.mirantis.com/welcome/
+<h4>Mirantis Documentation: https://docs.mirantis.com/welcome/</h4>
 
 ```sh
 #docker.sh
