@@ -39,6 +39,7 @@
 
 <h4> If all checks were successfully ✅✅✅ passed you are ready to install docker and kubernetes on your virtual machine</h4>
 
-# [Continue to K8s Installation][PlDa]
+[<img src="../img/icons8-next-96.png" width="75" height="75">   <img src="../img/icons8-kubernetes-96.png" width="75" height="75">][PlDa]
+
 [PlDa]:<../3. Kubernetes Installation/README.md>
 
