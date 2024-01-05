@@ -21,9 +21,9 @@
 # <h4>Now proceed with installation and wait⏳ until Ubuntu is successfully installed on your virtual machine</h4>
 
 
-# <h4>Finally🥳, installer will ask you to reboot your machine, so after restart login and let’s check that everything goes right way</h4>
+# <h3>Finally🥳, installer will ask you to reboot your machine, so after restart login and let’s check that everything goes right way</h3>
 
-# 7. Check Ubuntu installation.
+# <h4> 7. Check Ubuntu installation </h4>
 ✅Check access to you local computer from master node<br>
 
      ping <Localhost IP>
@@ -39,6 +39,7 @@
 
 <h4> If all checks were successfully ✅✅✅ passed you are ready to install docker and kubernetes on your virtual machine</h4>
 
-# [Continue to K8s Installation][PlDa]
+[<img src="../img/icons8-next-96.png" width="75" height="75">   <img src="../img/icons8-kubernetes-96.png" width="75" height="75">][PlDa]
+
 [PlDa]:<../3. Kubernetes Installation/README.md>
 
