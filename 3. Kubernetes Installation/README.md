@@ -1,11 +1,13 @@
 # <a href="https://kubernetes.io/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/kubernetes-icon.svg" alt="Kubernetes" height="50" /></a> Kubernetes Setup
 
-<h3>Configure share folder</h3>
+<h3>Configure share folder <img src="../img/icons8-share-folder-48.png" width="40" height="40"></h3>
 
 <h4>1. First of all go to Devices -> Insert Guest Additions CD image <img src="../img/icons8-cd-40.png" width="40" height="40"></h4>
 <img src="images/Screenshot_11.png" width="800" height="600">
+<br>
 
-2. after Inserting Guest Additions CD image
+<h4>2. after Inserting Guest Additions CD image</h4>
+
 From the terminal, run the following commands:
 
 ```sh
@@ -17,9 +19,9 @@ mount /dev/cdrom /media/cdrom
 /media/cdrom/VBoxLinuxAdditions.run
 reboot
 ```
-Your share folder will be in /media/sf<your_folder> <img src="../img/icons8-share-folder-48.png" width="40" height="40">
+Your share folder <img src="../img/icons8-share-folder-48.png" width="40" height="40"> will be in /media/sf<your_folder>
 
-# <h4>3. Disable Swap<img src="../img/icons8-close-96.png" width="40" height="40"></h4>
+# <h4>3.<img src="../img/icons8-close-96.png" width="40" height="40"> Disable Swap</h4>
 
 ```sh
 sudo sed -i '/\sswap\s/s/^/#/' /etc/fstab
@@ -54,7 +56,7 @@ kubeadm version --output=yaml
 
 <h4>I’m going to use Docker as a container runtime for kubernetes in my cluster</h4>
 <h4>To make in complaint with kubernetes I will use Mirantis. It’s an adapter for Docker Engine to implement CRI interfaces</h4>
-Mirantis Documentation: https://docs.mirantis.com/welcome/
+<h4>Mirantis Documentation: https://docs.mirantis.com/welcome/</h4>
 
 ```sh
 #docker.sh
@@ -78,7 +80,8 @@ sudo tee /etc/docker/daemon.json <<EOF
 }
 EOF
 ```
-# <img src="../img/icons8-check-48.png" width="40" height="40"><h4>Check your installation</h4>
+
+# <h4><img src="../img/icons8-check-48.png" width="40" height="40">Check your installation</h4>
 
 ```sh
 docker --version
@@ -157,8 +160,13 @@ worker-2
   
 following the same steps as for master node.
 ```
- # [Continue to finish Cluster Installation][PlDa]
- # [Continue to Worker Installation][PlDb]
+
+# Continue
+
+# [<img src="../img/icons8-next-96.png" width="75" height="75"> 👾👾][PlDb]
+
+[<img src="../img/icons8-next-96.png" width="75" height="75"> <img src="../img/icons8-cluster-64.png" width="75" height="75">][PlDa]
+
 
 
 [PlDb]:<../1. Virtual Machines/README.md>
