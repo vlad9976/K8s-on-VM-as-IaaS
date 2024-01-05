@@ -33,7 +33,8 @@
 <img src="images/Screenshot_12.png" width="500" height="250">
 <h4>10. Now save all your settings</h4>
 
-# [Continue to Ubuntu Installation][PlDa]
+[<img src="../img/icons8-next-96.png" width="50" height="50">   <img src="../img/icons8-ubuntu-96.png" width="50" height="50">][PlDa]
+
 [PlDa]:<../2. Ubuntu Installation/setup.md>
 
 
