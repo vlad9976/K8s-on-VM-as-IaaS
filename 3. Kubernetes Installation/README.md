@@ -78,6 +78,7 @@ sudo tee /etc/docker/daemon.json <<EOF
 }
 EOF
 ```
+
 # <img src="../img/icons8-check-48.png" width="40" height="40"><h4>Check your installation</h4>
 
 ```sh
