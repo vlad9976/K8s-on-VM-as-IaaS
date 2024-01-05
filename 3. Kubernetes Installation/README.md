@@ -17,9 +17,9 @@ mount /dev/cdrom /media/cdrom
 /media/cdrom/VBoxLinuxAdditions.run
 reboot
 ```
-Your share folder will be in /media/sf<your_folder> <img src="../img/icons8-share-folder-48.png" width="40" height="40">
+Your share folder <img src="../img/icons8-share-folder-48.png" width="40" height="40"> will be in /media/sf<your_folder>
 
-# <h4>3. Disable Swap<img src="../img/icons8-close-96.png" width="40" height="40"></h4>
+# <h4>3.<img src="../img/icons8-close-96.png" width="40" height="40"> Disable Swap</h4>
 
 ```sh
 sudo sed -i '/\sswap\s/s/^/#/' /etc/fstab
