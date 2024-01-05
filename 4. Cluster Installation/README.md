@@ -16,7 +16,7 @@ sudo kubeadm config images pull --cri-socket /run/cri-dockerd.sock
 cat /etc/hosts
 ```
 
-# 3.  Start init command
+# <h4>3.  Start init command</h4>
 
 ```sh
 sudo kubeadm init \
@@ -73,7 +73,8 @@ kubeadm join master-vm:6443 --token e8r3yb.it74vseuaxlzjlzp \
 ```
 <h4>To copy /etc/kubernetes/admin.conf to your local computer you can use shared directory.</h4>
 
-# 5. <img src="../img/icons8-network-65.png" width="40" height="40"> Configure Kubernetes cluster network.
+# <h4>5. <img src="../img/icons8-network-65.png" width="40" height="40"> Configure Kubernetes cluster network.</h4>
+
 <h4>For communication between different nodes in cluster another CNI plugin is required. I chose Flannel for my cluster.</h4>
 
 <img src="/img/flannel.svg" width="30" height="30"> Flannel git page: https://github.com/flannel-io/flannel
@@ -136,9 +137,9 @@ To generate new token on master use:
 ```sh
 kubeadm token create --print-join-command
 ```
-<h4>Now you can connect to your worker nodes and join the cluster.</h4>
+<h4>Now you can connect to your worker nodes and join the cluster <img src="../img/icons8-add-node-96.png" width="40" height="40"></h4>
   
-<h4>Do not forget to add IP mapping for master-vm in /etc/hosts on all you worker nodes</h4>
+<h4>Do not forget to add IP mapping for master-vm in /etc/hosts on all worker nodes</h4>
 
 <h4>7. We will have to append this line to the join command --cri-socket unix:///var/run/cri-dockerd.sock</h4>
 
