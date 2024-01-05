@@ -23,7 +23,7 @@
 
 # <h3>Finally🥳, installer will ask you to reboot your machine, so after restart login and let’s check that everything goes right way</h3>
 
-# 7. Check Ubuntu installation.
+# <h4> 7. Check Ubuntu installation </h4>
 ✅Check access to you local computer from master node<br>
 
      ping <Localhost IP>
