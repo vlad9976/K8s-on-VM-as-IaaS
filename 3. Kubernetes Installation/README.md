@@ -2,7 +2,7 @@
 
 <h3>Configure share folder</h3>
 
-<h4>1. First of all go to Devices -> Insert Guest Additions CD image</h4>
+<h4>1. First of all go to Devices -> Insert Guest Additions CD image <img src="../img/icons8-cd-40.png" width="40" height="40"></h4>
 <img src="images/Screenshot_11.png" width="800" height="600">
 
 2. after Inserting Guest Additions CD image
@@ -17,9 +17,9 @@ mount /dev/cdrom /media/cdrom
 /media/cdrom/VBoxLinuxAdditions.run
 reboot
 ```
-Your share folder will be in /media/sf<your_folder>
+Your share folder will be in /media/sf<your_folder> <img src="../img/icons8-share-folder-48.png" width="40" height="40">
 
-# 3. Disable Swap
+# <h4>3. Disable Swap<img src="../img/icons8-close-96.png" width="40" height="40"></h4>
 
 ```sh
 sudo sed -i '/\sswap\s/s/^/#/' /etc/fstab
@@ -29,7 +29,7 @@ free -h
 <h4>Should look like this</h4>
 <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*XFIwxWHc9SMMXMcWb65-GQ.png" width="500" height="30">
 
-# 4. <img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/kubernetes-icon.svg" alt="Kubernetes" height="35" /> Install kubernetes
+# <h4>4. Install kubernetes  <img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/kubernetes-icon.svg" alt="Kubernetes" height="40" /></h4>
 <h4>Now it’s time to install kubernetes itself on the master node. I made my cluster set up for 1.25.4 version</h4>
 <h4>I’m going to put all required commands to k8s.sh file to run it in master node, and worker nodes after all</h4>
 
@@ -44,16 +44,17 @@ sudo apt update
 sudo apt install kubelet=1.25.4-00 kubeadm=1.25.4-00 kubectl=1.25.4-00 -y
 sudo apt-mark hold kubelet kubeadm kubectl
 ```
-# Check your installation
+# <h4><img src="../img/icons8-check-48.png" width="40" height="40">Check your installation</h4>
 
 ```sh
 kubectl version --output=yaml
 kubeadm version --output=yaml
 ```
-# 5. <img src="/img/icons8-docker-96.png" width="40" height="40"> Install docker
+# <h4>5. Install docker <img src="/img/icons8-docker-96.png" width="40" height="40"></h4>
 
 <h4>I’m going to use Docker as a container runtime for kubernetes in my cluster</h4>
 <h4>To make in complaint with kubernetes I will use Mirantis. It’s an adapter for Docker Engine to implement CRI interfaces</h4>
+Mirantis Documentation: https://docs.mirantis.com/welcome/
 
 ```sh
 #docker.sh
@@ -77,13 +78,13 @@ sudo tee /etc/docker/daemon.json <<EOF
 }
 EOF
 ```
-# Check your installation
+# <img src="../img/icons8-check-48.png" width="40" height="40"><h4>Check your installation</h4>
 
 ```sh
 docker --version
 ```
 
-# 6. To finish Docker setup for kubernetes let’s install Mirantis
+# <h4>6. To finish Docker setup for kubernetes let’s install Mirantis</h4>
 
 ```sh
 #mirantis.sh
@@ -105,14 +106,14 @@ sudo systemctl enable cri-docker.service
 sudo systemctl enable --now cri-docker.socket
 ```
 
-# Check your installation
+# <h4><img src="../img/icons8-check-48.png" width="40" height="40">Check your installation</h4>
 
 ```sh
 cri-dockerd --version
 systemctl status cri-docker.socket
 ```
 
-# 7. Configure Kubernetes prerequisites.
+# <h4>7. Configure Kubernetes prerequisites.</h4>
 <h4>Documentation: https://kubernetes.io/docs/setup/production-environment/container-runtimes/</h4>
 
 I created prerequisites.sh based on documentation
@@ -136,7 +137,7 @@ EOF
 sudo sysctl --system
 ```
 
-# 8. Run the script and check setup was correctly applied.
+# <h4>8. Run the script and check setup was correctly applied.</h4>
 
 ```sh
 lsmod | grep br_netfilter
@@ -144,7 +145,7 @@ lsmod | grep overlay
 sysctl net.bridge.bridge-nf-call-iptables net.bridge.bridge-nf-call-ip6tables net.ipv4.ip_forward
 ```
 
-# 9. Setup worker nodes 👾👾.
+# <h4>9. Setup worker nodes 👾👾</h4>
 
 <h4>Master node setup is completed and it’s time to create a cluster. However, it would be better to configure worker nodes on this step before going further.</h4>
   
