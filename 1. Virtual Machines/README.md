@@ -36,31 +36,16 @@
 # [Continue to Ubuntu Installation][PlDa]
 [PlDa]:<../2. Ubuntu Installation/setup.md>
 
-function getClickPosition(e) {
-  var p = {
-    x: e.clientX,
-    y: e.clientY
-  }
-  drawAt(p);
-  return p
-}
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
-function drawAt(point) {
-  var dotSize = 10; // in px
-  var div = document.createElement('div');
-  div.style.backgroundColor = "#000"
-  div.style.width = dotSize + "px";
-  div.style.height = dotSize + "px"
-  div.style.position = "absolute"
-  div.style.left = (point.x - dotSize / 2) + "px"
-  div.style.top = (point.y - dotSize / 2) + "px"
-  div.style.borderRadius = "50%"
-  root.appendChild(div);
-}
-
-document.getElementById("root").addEventListener('click', function(e) {
-  getClickPosition(e);
-})
-
-<div id="root" style="width: 400px; height: 300px; background-color: #ccc"></div>
+<figure class="highcharts-figure">
+  <div id="container"></div>
+  <p class="highcharts-description">
+    Chart allowing users to update the data by clicking in the chart area.
+    Clicking an existing point will remove it.
+  </p>
+</figure>
 
