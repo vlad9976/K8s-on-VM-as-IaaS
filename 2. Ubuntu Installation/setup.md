@@ -21,7 +21,7 @@
 # <h4>Now proceed with installation and wait⏳ until Ubuntu is successfully installed on your virtual machine</h4>
 
 
-# <h4>Finally🥳, installer will ask you to reboot your machine, so after restart login and let’s check that everything goes right way</h4>
+# <h3>Finally🥳, installer will ask you to reboot your machine, so after restart login and let’s check that everything goes right way</h3>
 
 # 7. Check Ubuntu installation.
 ✅Check access to you local computer from master node<br>
