@@ -2,7 +2,7 @@
 
 <h3>Configure share folder</h3>
 
-<h4>1. First of all go to Devices -> Insert Guest Additions CD image</h4>
+<h4>1. First of all go to Devices -> Insert Guest Additions CD image <img src="../img/icons8-cd-40.png" width="40" height="40"></h4>
 <img src="images/Screenshot_11.png" width="800" height="600">
 
 2. after Inserting Guest Additions CD image
@@ -17,9 +17,9 @@ mount /dev/cdrom /media/cdrom
 /media/cdrom/VBoxLinuxAdditions.run
 reboot
 ```
-<img src="../img/icons8-share-folder-48.png" width="40" height="40"> Your share folder will be in /media/sf<your_folder>
+Your share folder will be in /media/sf<your_folder> <img src="../img/icons8-share-folder-48.png" width="40" height="40">
 
-# <h4>3. Disable Swap</h4>
+# <h4>3. Disable Swap<img src="../img/icons8-close-96.png" width="40" height="40"></h4>
 
 ```sh
 sudo sed -i '/\sswap\s/s/^/#/' /etc/fstab
@@ -44,7 +44,7 @@ sudo apt update
 sudo apt install kubelet=1.25.4-00 kubeadm=1.25.4-00 kubectl=1.25.4-00 -y
 sudo apt-mark hold kubelet kubeadm kubectl
 ```
-# <h4>Check your installation</h4>
+# <h4><img src="../img/icons8-check-48.png" width="40" height="40">Check your installation</h4>
 
 ```sh
 kubectl version --output=yaml
@@ -54,6 +54,7 @@ kubeadm version --output=yaml
 
 <h4>I’m going to use Docker as a container runtime for kubernetes in my cluster</h4>
 <h4>To make in complaint with kubernetes I will use Mirantis. It’s an adapter for Docker Engine to implement CRI interfaces</h4>
+Mirantis Documentation: https://docs.mirantis.com/welcome/
 
 ```sh
 #docker.sh
@@ -77,7 +78,7 @@ sudo tee /etc/docker/daemon.json <<EOF
 }
 EOF
 ```
-# <h4>Check your installation</h4>
+# <img src="../img/icons8-check-48.png" width="40" height="40"><h4>Check your installation</h4>
 
 ```sh
 docker --version
@@ -105,7 +106,7 @@ sudo systemctl enable cri-docker.service
 sudo systemctl enable --now cri-docker.socket
 ```
 
-# Check your installation
+# <h4><img src="../img/icons8-check-48.png" width="40" height="40">Check your installation</h4>
 
 ```sh
 cri-dockerd --version
