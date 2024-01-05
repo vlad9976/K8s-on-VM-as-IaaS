@@ -161,10 +161,12 @@ worker-2
 following the same steps as for master node.
 ```
 
-# Continoe
+# Continue
+
+# [<img src="../img/icons8-next-96.png" width="75" height="75"> 👾👾][PlDb]
 
 [<img src="../img/icons8-next-96.png" width="75" height="75"> <img src="../img/icons8-cluster-64.png" width="75" height="75">][PlDa]
-# [<img src="../img/icons8-next-96.png" width="75" height="75"> 👾👾][PlDb]
+
 
 
 [PlDb]:<../1. Virtual Machines/README.md>
