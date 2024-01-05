@@ -3,9 +3,9 @@
 <img src="/img/icons8-nginx-accelerates-content-and-application-delivery-improves-security-96.png" width="180" height="180">
 <img src="/img/icons8-virtualbox-logo-96.png" width="180" height="180">
 <br>
-<h2>Kubernetes Cluster on Ubuntu Server 22.04 LTS🚀(Virtualbox📦)</h2>
-<h3>😅 Why K8s? Because between the K and the S there are 8 letters.</h3>
-<h4>We will create kubernetes cluster on Ubuntu Server 22.04 LTS<br>Using virtualbox and deploying Metallb LoadBalancer and Nginx ingress controller</h4>
+<h3>Kubernetes bare-metal clusters work in a similar way as their equivalents in IaaS platform providers🚀(Virtualbox📦)</h3>
+<h4>😅 Why K8s? Because between the K and the S there are 8 letters.</h4>
+<h4>We will create kubernetes cluster on Ubuntu Server 22.04 LTS<br>Using virtualbox and deploying Metallb Loadbalancer and Nginx ingress controller</h4>
 
 
 # <h3>Steps in short</h3>
