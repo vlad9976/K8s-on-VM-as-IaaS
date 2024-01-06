@@ -9,7 +9,7 @@
 
 <h3>To Start Read Down <img src="/img/icons8-down-96.png" width="30" height="30"></h3>
 
-# <h3><img src="../img/icons8-start-40.png" width="30" height="30">Steps in short</h3>
+# <h3><img src="/img/icons8-start-40.png" width="30" height="30">Steps in short</h3>
 1. Spin 3 Virtual machines<br>
    1.1 Master 🤖<br>
    1.2 Worker 👾👾
