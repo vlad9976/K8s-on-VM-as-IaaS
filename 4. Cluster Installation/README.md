@@ -10,7 +10,7 @@ sudo kubeadm config images pull --cri-socket /run/cri-dockerd.sock
 ```
 
 <h4>2. <img src="../img/icons8-check-48.png" width="30" height="30"> Check /etc/hosts on master node. It should contain mapping for master-vm</h4>
-<h4>DONT forget to map Workers to /etc/hosts on the master </h4>
+<h4><img src="../img/icons8-map-94.png" width="30" height="30"> DONT forget to map Workers to /etc/hosts on the master </h4>
 
 ```sh
 cat /etc/hosts
