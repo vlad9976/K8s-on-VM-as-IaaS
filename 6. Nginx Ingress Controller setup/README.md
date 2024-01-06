@@ -110,9 +110,9 @@ for i in {1..5}; do curl www.example.com; done
 
 <img src="/img/icons8-output-96.png" width="30" height="30"> Output:
 
-<h3><img src="/img/icons8-load-balancer-96.png" width="30" height="30"> Check out how the requests are load-balanced among our 3 pods!</h3>
-
 <img src="./images/Screenshot_8.png" width="600" height="200">
+
+<h3><img src="/img/icons8-load-balancer-96.png" width="30" height="30"> Check out how the requests are load-balanced among our 3 pods!</h3>
 
 # <h3>🥳🥳Congratulation!🥳🥳 You have been created kubernetes cluster on on-premises environment, Deployed Metallb loadbalancer solution and Nginx  Controller</h3>
 
