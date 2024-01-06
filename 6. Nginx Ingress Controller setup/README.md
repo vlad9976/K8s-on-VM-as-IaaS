@@ -89,7 +89,7 @@ status:
 
 ```
 
-5. Map in your /etc/hosts file the domain we choose "www.example.com" to LoadBalancer IP
+5. <img src="../img/icons8-map-94.png" width="30" height="30">Map in your /etc/hosts file the domain we choose "www.example.com" to LoadBalancer IP
 
 <img src="./images/Screenshot_6.png" width="600" height="20">
 
