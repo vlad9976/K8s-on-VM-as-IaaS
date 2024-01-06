@@ -1,4 +1,4 @@
-#<img src="/img/icons8-nginx-accelerates-content-and-application-delivery-improves-security-96.png" width="50" height="50"> Nginx Ingress Controller Setup
+<img src="/img/icons8-nginx-accelerates-content-and-application-delivery-improves-security-96.png" width="50" height="50"> Nginx Ingress Controller Setup
 
 Nginx Documentation: https://docs.nginx.com/nginx-ingress-controller/<br>
 <br>
