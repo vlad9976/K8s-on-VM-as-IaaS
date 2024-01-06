@@ -84,7 +84,7 @@ Now let’s deploy these manifests:
 kubectl apply -f ipaddresspool.yaml
 kubectl apply -f l2advertisement.yaml
 ```
-# <h4>Take it for a test <img src="/img/icons8-test-64.png" width="30" height="30"></h4>
+# <h4><img src="/img/icons8-test-64.png" width="30" height="30"> Take it for a test</h4>
 
 ```sh
 # Remove old deployment and service.
