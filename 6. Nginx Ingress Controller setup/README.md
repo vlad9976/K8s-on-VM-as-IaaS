@@ -93,13 +93,13 @@ status:
 
 <img src="./images/Screenshot_6.png" width="600" height="20">
 
-# Test Ingress.
+# <img src="/img/icons8-test-64.png" width="30" height="30"> Test Ingress.
 
 ```sh
 curl www.exaple.com
 ```
 
-Output:
+<img src="/img/icons8-output-96.png" width="30" height="30"> Output:
 
 <img src="./images/Screenshot_7.png" width="500" height="100">
 
@@ -107,7 +107,7 @@ Output:
 for i in {1..5}; do curl www.example.com; done
 ```
 
-Output:
+<img src="/img/icons8-output-96.png" width="30" height="30"> Output:
 
 <img src="./images/Screenshot_8.png" width="600" height="200">
 
