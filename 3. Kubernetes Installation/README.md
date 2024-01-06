@@ -22,7 +22,6 @@ reboot
 <img src="../img/icons8-share-folder-48.png" width="30" height="30"> Your share folder will be in /media/sf<your_folder>
 
 # <h4>3.<img src="../img/icons8-close-96.png" width="30" height="30"> Disable Swap</h4>
-<h4> <img src="../img/icons8-terminal-100.png" width="30" height="30"> Terminal: </h4>
 
 ```sh
 sudo sed -i '/\sswap\s/s/^/#/' /etc/fstab
@@ -141,7 +140,7 @@ EOF
 sudo sysctl --system
 ```
 
-# <h4>8. Run the script and check setup was correctly applied.</h4>
+# <h4>8.<img src="../img/icons8-check-48.png" width="30" height="30"> Run the script and check setup was correctly applied.</h4>
 
 ```sh
 lsmod | grep br_netfilter
@@ -164,9 +163,9 @@ following the same steps as for master node.
 
 # Continue
 
-# [<img src="../img/icons8-next-96.png" width="75" height="75"> 👾👾][PlDb]
+# [<img src="../img/icons8-next-96.png" width="75" height="75"> Setup Worker Nodes 👾👾][PlDb]
 
-[<img src="../img/icons8-next-96.png" width="75" height="75"> <img src="../img/icons8-cluster-64.png" width="75" height="75">][PlDa]
+# [<img src="../img/icons8-next-96.png" width="75" height="75"> Cluster Installation <img src="../img/icons8-cluster-64.png" width="75" height="75">][PlDa]
 
 
 
