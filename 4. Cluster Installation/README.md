@@ -149,7 +149,7 @@ kubeadm join k8smaster:6443 --token e8r3yb.it74vseuaxlzjlzp \
 --discovery-token-ca-cert-hash sha256:a43e08f52250a63486dd373cd50756a2ac0e90b62fbf0031a5e386f3d7e4f816 --cri-socket unix:///var/run/cri-dockerd.sock
 ```
 
-<h2>Wait for a while and you can check the installation using kubectl</h2>
+<h4>Wait for a while and you can check the installation using kubectl</h4>
 
 ```sh
 kubectl get node
