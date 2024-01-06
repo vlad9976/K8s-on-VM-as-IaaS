@@ -73,6 +73,13 @@ kubeadm join master-vm:6443 --token e8r3yb.it74vseuaxlzjlzp \
 ```
 <h4>To copy /etc/kubernetes/admin.conf to your local computer you can use shared directory.</h4>
 
+# <h4><img src="../img/icons8-undo-96.png" width="30" height="30"> TroubleShoot: if you need to undo kubeadm init </h4>
+
+```sh
+sudo kubeadm reset --cri-socket unix:///var/run/cri-dockerd.sock
+```
+Try kubeadm init again
+
 # <h4>5. <img src="../img/icons8-network-65.png" width="40" height="40"> Configure Kubernetes cluster network</h4>
 
 <h4>For communication between different nodes in cluster another CNI plugin is required. I chose Flannel for my cluster.</h4>
@@ -148,6 +155,16 @@ kubeadm token create --print-join-command
 kubeadm join k8smaster:6443 --token e8r3yb.it74vseuaxlzjlzp \
 --discovery-token-ca-cert-hash sha256:a43e08f52250a63486dd373cd50756a2ac0e90b62fbf0031a5e386f3d7e4f816 --cri-socket unix:///var/run/cri-dockerd.sock
 ```
+
+# <h4><img src="../img/icons8-undo-96.png" width="30" height="30"> TroubleShoot: if you need you undo kubeadm join
+
+```sh
+sudo apt-mark unhold kubelet kubeadm
+sudo apt remove kubelet=1.25.4-00 kubeadm=1.25.4-00
+sudo rm -f /etc/kubernetes/kubelet.conf /etc/kubernetes/pki/ca.crt 
+sudo apt install kubelet=1.25.4-00 kubeadm=1.25.4-00
+```
+Try Joining again
 
 <h4> <img src="../img/icons8-check-48.png" width="30" height="30"> Wait for a while and you can check the installation using kubectl</h4>
 
