@@ -165,7 +165,7 @@ following the same steps as for master node.
 
 # [<img src="../img/icons8-next-96.png" width="75" height="75"> Setup Worker Nodes 👾👾][PlDb]
 
-[<img src="../img/icons8-next-96.png" width="75" height="75"> Cluster Installation <img src="../img/icons8-cluster-64.png" width="75" height="75">][PlDa]
+# [<img src="../img/icons8-next-96.png" width="75" height="75"> Cluster Installation <img src="../img/icons8-cluster-64.png" width="75" height="75">][PlDa]
 
 
 
