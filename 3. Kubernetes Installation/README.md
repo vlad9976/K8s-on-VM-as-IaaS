@@ -1,8 +1,8 @@
 # <a href="https://kubernetes.io/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/kubernetes-icon.svg" alt="Kubernetes" height="60" /></a> Kubernetes Setup
 
-<h3><img src="../img/icons8-share-folder-48.png" width="40" height="40"> Configure share folder</h3>
+<h3><img src="../img/icons8-share-folder-48.png" width="30" height="30"> Configure share folder</h3>
 
-<h4>1. First of all go to Devices -> Insert Guest Additions CD image <img src="../img/icons8-cd-40.png" width="40" height="40"></h4>
+<h4>1. First of all go to Devices -> Insert Guest Additions CD image <img src="../img/icons8-cd-40.png" width="30" height="30"></h4>
 <img src="images/Screenshot_11.png" width="800" height="600">
 <br>
 
@@ -19,9 +19,9 @@ mount /dev/cdrom /media/cdrom
 /media/cdrom/VBoxLinuxAdditions.run
 reboot
 ```
-Your share folder <img src="../img/icons8-share-folder-48.png" width="40" height="40"> will be in /media/sf<your_folder>
+Your share folder <img src="../img/icons8-share-folder-48.png" width="30" height="30"> will be in /media/sf<your_folder>
 
-# <h4>3.<img src="../img/icons8-close-96.png" width="40" height="40"> Disable Swap</h4>
+# <h4>3.<img src="../img/icons8-close-96.png" width="30" height="30"> Disable Swap</h4>
 
 ```sh
 sudo sed -i '/\sswap\s/s/^/#/' /etc/fstab
@@ -46,13 +46,13 @@ sudo apt update
 sudo apt install kubelet=1.25.4-00 kubeadm=1.25.4-00 kubectl=1.25.4-00 -y
 sudo apt-mark hold kubelet kubeadm kubectl
 ```
-# <h4><img src="../img/icons8-check-48.png" width="40" height="40">Check your installation</h4>
+# <h4><img src="../img/icons8-check-48.png" width="30" height="30">Check your installation</h4>
 
 ```sh
 kubectl version --output=yaml
 kubeadm version --output=yaml
 ```
-# <h4>5. Install docker <img src="/img/icons8-docker-96.png" width="40" height="40"></h4>
+# <h4>5. Install docker <img src="/img/icons8-docker-96.png" width="30" height="30"></h4>
 
 <h4>I’m going to use Docker as a container runtime for kubernetes in my cluster</h4>
 <h4>To make in complaint with kubernetes I will use Mirantis. It’s an adapter for Docker Engine to implement CRI interfaces</h4>
@@ -81,7 +81,7 @@ sudo tee /etc/docker/daemon.json <<EOF
 EOF
 ```
 
-# <h4><img src="../img/icons8-check-48.png" width="40" height="40">Check your installation</h4>
+# <h4><img src="../img/icons8-check-48.png" width="30" height="30">Check your installation</h4>
 
 ```sh
 docker --version
@@ -109,7 +109,7 @@ sudo systemctl enable cri-docker.service
 sudo systemctl enable --now cri-docker.socket
 ```
 
-# <h4><img src="../img/icons8-check-48.png" width="40" height="40">Check your installation</h4>
+# <h4><img src="../img/icons8-check-48.png" width="30" height="30">Check your installation</h4>
 
 ```sh
 cri-dockerd --version
