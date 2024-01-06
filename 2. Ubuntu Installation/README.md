@@ -41,7 +41,7 @@
 
 # Continue
 
-[<img src="../img/icons8-next-96.png" width="75" height="75">   <img src="../img/icons8-kubernetes-96.png" width="75" height="75">][PlDa]
+[<img src="../img/icons8-next-96.png" width="75" height="75">   <img src="../img/icons8-kubernetes-96.png" width="75" height="75"><img src="../img/icons8-docker-96.png" width="75" height="75">][PlDa]
 
 [PlDa]:<../3. Kubernetes Installation/README.md>
 
