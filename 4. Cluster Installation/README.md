@@ -26,6 +26,12 @@ sudo kubeadm init \
   --control-plane-endpoint=master-vm:6443 >  master-vm.log
 ```
 
+# <h4> TroubleShoot: if you need to undo kubeadm init </h4>
+
+```sh
+sudo kubeadm reset --cri-socket unix:///var/run/cri-dockerd.sock
+```
+
 <h4>In the command above pay attention that I chose subnet 10.244.0.0/16 for kubernetes cluster nodes, so pods will be communicating between each other using this subnet inside cluster.</h4>
 
 <h4> <img src="../img/icons8-check-48.png" width="30" height="30"> Installation may take some time and you can check master-vm.log file.</h4>
