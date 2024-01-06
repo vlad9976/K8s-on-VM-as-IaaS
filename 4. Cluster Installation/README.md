@@ -1,4 +1,4 @@
-# <img src="/img/icons8-cluster-64.png" width="40" height="40"> Create Kubernetes cluster.
+# <img src="/img/icons8-cluster-64.png" width="60" height="60"> Create Kubernetes cluster.
 
 <h4>If you finished successfully all previous steps you should have 3 virtual machines with Ubuntu, kubernetes and docker installed.</h4>
 <h4>For cluster creation kubeadm command is used. First, it pulls images for kubernetes control plane to container runtime (docker in our case) and then initializes the control plane.<h4>
@@ -73,7 +73,7 @@ kubeadm join master-vm:6443 --token e8r3yb.it74vseuaxlzjlzp \
 ```
 <h4>To copy /etc/kubernetes/admin.conf to your local computer you can use shared directory.</h4>
 
-# <h4>5. <img src="../img/icons8-network-65.png" width="40" height="40"> Configure Kubernetes cluster network.</h4>
+# <h4>5. Configure Kubernetes cluster network <img src="../img/icons8-network-65.png" width="40" height="40"></h4>
 
 <h4>For communication between different nodes in cluster another CNI plugin is required. I chose Flannel for my cluster.</h4>
 
@@ -149,14 +149,14 @@ kubeadm join k8smaster:6443 --token e8r3yb.it74vseuaxlzjlzp \
 --discovery-token-ca-cert-hash sha256:a43e08f52250a63486dd373cd50756a2ac0e90b62fbf0031a5e386f3d7e4f816 --cri-socket unix:///var/run/cri-dockerd.sock
 ```
 
-<h2>Wait for a while and you can check the installation using kubectl</h2>
+<h4>Wait for a while and you can check the installation using kubectl</h4>
 
 ```sh
 kubectl get node
 or
 kubectl get node -o wide
 ```
-# ✅ Check cluster setup
+# <h4>✅ Check cluster setup</h4>
 <h4>By default kubernetes uses default namespace. For system pods it uses kube-system, flannel uses kube-flannel. To get all pods from all namespaces you can use</h4>
 
 ```sh
@@ -186,5 +186,7 @@ kubectl describe pod kube-flannel-ds-7nhwn -n kube-flannel
 kubectl logs kube-flannel-ds-7nhwn -n kube-flannel
 ```
 
- # [Continue to MetalLB setup Installation][PlDa]
+ [<img src="../img/icons8-next-96.png" width="75" height="75"> <img src="../img/metallb-icon-color.png" width="75" height="75">][PlDa]
+ 
  [PlDa]:<../5. MetalLB setup/README.md>
+
