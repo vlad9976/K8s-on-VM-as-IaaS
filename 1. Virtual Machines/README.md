@@ -32,7 +32,7 @@
 # <h4>9. I also suggest to configure a shared folder, because it’s very helpful to use bash scripts during setup</h4>
 <img src="images/Screenshot_12.png" width="500" height="250">
 
-<h4>10. Now save all your settings</h4>
+<h4> 10. <img src="../img/icons8-save-96.png" width="30" height="30"> Now save all your settings</h4>
 
 # Continue
 
