@@ -114,3 +114,6 @@ for i in {1..5}; do curl www.example.com; done
 # <h3>🥳🥳Congratulation!🥳🥳 You have been created kubernetes cluster on on-premises environment, Deployed Metallb loadbalancer solution and Nginx ingress.</h3>
 
 # <h3>Hope everything went well! Happy Kubernetes-ing on your on-premises infrastructure, just as seamlessly as on IaaS</h3>
+
+ # [<img src="/img/icons8-start-40.png" width="70" height="70">   <img src="../img/icons8-back-60.png" width="75" height="75">][PlDa]
+ [PlDa]:<../>
