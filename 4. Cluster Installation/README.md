@@ -149,7 +149,7 @@ kubeadm join k8smaster:6443 --token e8r3yb.it74vseuaxlzjlzp \
 --discovery-token-ca-cert-hash sha256:a43e08f52250a63486dd373cd50756a2ac0e90b62fbf0031a5e386f3d7e4f816 --cri-socket unix:///var/run/cri-dockerd.sock
 ```
 
-<h4>Wait for a while and you can check the installation using kubectl</h4>
+<h4> <img src="../img/icons8-check-48.png" width="30" height="30"> Wait for a while and you can check the installation using kubectl</h4>
 
 ```sh
 kubectl get node
@@ -179,14 +179,14 @@ kube-system     kube-scheduler-k8smaster                    1/1     Running   0 
 <h4>Pay attention that there are 3 flannel pods, each for every node.
 All pods should running fine.</h4>
 
-<h4>If you have some errors you can get details using</h4>
+<h4> <img src="../img/icons8-error-64.png" width="30" height="30"> If you have some errors you can get details using</h4>
 
 ```sh
 kubectl describe pod kube-flannel-ds-7nhwn -n kube-flannel
 kubectl logs kube-flannel-ds-7nhwn -n kube-flannel
 ```
 
- [<img src="../img/icons8-next-96.png" width="75" height="75"> Metallb Setup <img src="../img/metallb-icon-color.png" width="75" height="75">][PlDa]
+ # [<img src="../img/icons8-next-96.png" width="75" height="75"> Metallb Setup <img src="../img/metallb-icon-color.png" width="75" height="75">][PlDa]
  
  [PlDa]:<../5. MetalLB setup/README.md>
 
