@@ -36,7 +36,7 @@
 
 # Continue
 
-[<img src="../img/icons8-next-96.png" width="75" height="75">   <img src="../img/icons8-ubuntu-96.png" width="75" height="75">][PlDa]
+# [<img src="../img/icons8-next-96.png" width="75" height="75"> Ubuntu Installation <img src="../img/icons8-ubuntu-96.png" width="75" height="75">][PlDa]
 
 [PlDa]:<../2. Ubuntu Installation/README.md>
 
