@@ -16,7 +16,7 @@ sudo kubeadm config images pull --cri-socket /run/cri-dockerd.sock
 cat /etc/hosts
 ```
 
-# <h4>3. Start init command</h4>
+# <h4>3.<img src="../img/icons8-button-50.png" width="30" height="30"> Start init command</h4>
 
 ```sh
 sudo kubeadm init \
