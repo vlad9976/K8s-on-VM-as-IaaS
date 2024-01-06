@@ -179,7 +179,7 @@ kube-system     kube-scheduler-k8smaster                    1/1     Running   0 
 <h4>Pay attention that there are 3 flannel pods, each for every node.
 All pods should running fine.</h4>
 
-<h4>If you have some errors you can get details using</h4>
+<h4> <img src="../img/icons8-error-64.png" width="30" height="30"> If you have some errors you can get details using</h4>
 
 ```sh
 kubectl describe pod kube-flannel-ds-7nhwn -n kube-flannel
