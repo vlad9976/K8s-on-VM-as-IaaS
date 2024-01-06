@@ -121,5 +121,5 @@ for i in {1..5}; do curl http://192.168.13.247; done
 
 Check out how the requests are load-balanced among our 3 pods!
 
- # [Continue to Nginx Ingress Controller setup][PlDa]
+ # [<img src="../img/icons8-next-96.png" width="75" height="75">   <img src="../img/icons8-nginx-accelerates-content-and-application-delivery-improves-security-96.png" width="75" height="75">][PlDa]
  [PlDa]:<../6. Nginx Ingress Controller setup/README.md>
