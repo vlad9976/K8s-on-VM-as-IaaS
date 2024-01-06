@@ -1,6 +1,4 @@
-# Metallb Setup
-
-<img src="/img/metallb-icon-color.png" width="180" height="180">
+# <img src="/img/metallb-icon-color.png" width="50" height="50"> Metallb Setup
 
 Metallb Documentation: https://metallb.universe.tf/
 
