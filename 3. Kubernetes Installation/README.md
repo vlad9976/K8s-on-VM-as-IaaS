@@ -52,7 +52,10 @@ sudo apt-mark hold kubelet kubeadm kubectl
 kubectl version --output=yaml
 kubeadm version --output=yaml
 ```
-# <h4> <img src="../img/icons8-attention-48.png" width="30" height="30"> <img src="../img/icons8-install-64.png" width="30" height="30">You should Install Kubernetes on you local machine at this point if you running ubuntu the steps are the same </h4>
+# <h4> <img src="../img/icons8-attention-48.png" width="30" height="30"> <img src="../img/icons8-install-64.png" width="30" height="30">You should Install Kubernetes on you local machine at this point</h4>
+
+<img src="../img/icons8-ubuntu-96.png" width="30" height="30"> Repeate Step 4
+<img src="../img/icons8-windows-96.png" width="30" height="30"> Follow the link: https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/
 
 # <h4>5. <img src="/img/icons8-docker-96.png" width="30" height="30"> Install docker</h4>
 
