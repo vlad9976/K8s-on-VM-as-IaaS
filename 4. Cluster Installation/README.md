@@ -9,14 +9,14 @@
 sudo kubeadm config images pull --cri-socket /run/cri-dockerd.sock
 ```
 
-<h4>2. Check /etc/hosts on master node. It should contain mapping for master-vm</h4>
-<h4>DONT forget to map Workers to /etc/hosts on the master </h4>
+<h4>2. <img src="../img/icons8-check-48.png" width="30" height="30"> Check /etc/hosts on master node. It should contain mapping for master-vm</h4>
+<h4><img src="../img/icons8-map-94.png" width="30" height="30"> DONT forget to map Workers to /etc/hosts on the master </h4>
 
 ```sh
 cat /etc/hosts
 ```
 
-# <h4>3.  Start init command</h4>
+# <h4>3. Start init command</h4>
 
 ```sh
 sudo kubeadm init \
@@ -28,7 +28,7 @@ sudo kubeadm init \
 
 <h4>In the command above pay attention that I chose subnet 10.244.0.0/16 for kubernetes cluster nodes, so pods will be communicating between each other using this subnet inside cluster.</h4>
 
-<h4>Installation may take some time and you can check master-vm.log file.</h4>
+<h4> <img src="../img/icons8-check-48.png" width="30" height="30"> Installation may take some time and you can check master-vm.log file.</h4>
 
 ```sh
 # cat master-vm.log
@@ -73,7 +73,7 @@ kubeadm join master-vm:6443 --token e8r3yb.it74vseuaxlzjlzp \
 ```
 <h4>To copy /etc/kubernetes/admin.conf to your local computer you can use shared directory.</h4>
 
-# <h4>5. Configure Kubernetes cluster network <img src="../img/icons8-network-65.png" width="40" height="40"></h4>
+# <h4>5. <img src="../img/icons8-network-65.png" width="40" height="40"> Configure Kubernetes cluster network</h4>
 
 <h4>For communication between different nodes in cluster another CNI plugin is required. I chose Flannel for my cluster.</h4>
 
@@ -83,7 +83,7 @@ kubeadm join master-vm:6443 --token e8r3yb.it74vseuaxlzjlzp \
 wget https://raw.githubusercontent.com/flannel-io/flannel/master/Documentation/kube-flannel.yml
 
 ```
-<h4>In kube-flannel.yml check net-conf.json “Network” tag. It should have the same value as was used during control plane setup, i.e. 10.244.0.0/16.</h4>
+<h4><img src="../img/icons8-check-48.png" width="30" height="30">In kube-flannel.yml check net-conf.json “Network” tag. It should have the same value as was used during control plane setup, i.e. 10.244.0.0/16.</h4>
 
 ```sh
 #kube-flannel.yaml
@@ -120,26 +120,26 @@ FLANNEL_MTU=1450
 FLANNEL_IPMASQ=true
 ```
 
-<h4>Flannel pods are created in its own namespace kube-flannel, so you can check flannel pods are running</h4>
+<h4><img src="../img/icons8-check-48.png" width="30" height="30">Flannel pods are created in its own namespace kube-flannel, so you can check flannel pods are running</h4>
 
 ```sh
 kubectl get pods -n kube-flannel
 ```
 
-# Joining worker nodes 👾
+# 👾 Joining worker nodes
 
 <h4>As soon as Flannel installed, everything is ready to join worker nodes to cluster to finish setup.
 In log file of kubeadm init command (master-vm.log) there is already a join command to use to join worker node to cluster.</h4>
 
-<h2>kubeadm join requires a special token <img src="/img/icons8-access-64.png" width="30" height="30"> . It expires in 24 hours</h2>
+<h3> <img src="/img/icons8-access-64.png" width="30" height="30"> kubeadm join requires a special token. It expires in 24 hours</h3>
 To generate new token on master use:
 
 ```sh
 kubeadm token create --print-join-command
 ```
-<h4>Now you can connect to your worker nodes and join the cluster <img src="../img/icons8-add-node-96.png" width="40" height="40"></h4>
+<h4> <img src="../img/icons8-add-node-96.png" width="30" height="30"> Now you can connect to your worker nodes and join the cluster</h4>
   
-<h4>Do not forget to add IP mapping for master-vm in /etc/hosts on all worker nodes</h4>
+<h4> <img src="../img/icons8-map-94.png" width="30" height="30"> Do not forget to add IP mapping for master-vm in /etc/hosts on all worker nodes</h4>
 
 <h4>7. We will have to append this line to the join command --cri-socket unix:///var/run/cri-dockerd.sock</h4>
 
@@ -156,7 +156,7 @@ kubectl get node
 or
 kubectl get node -o wide
 ```
-# <h4>✅ Check cluster setup</h4>
+# <h4><img src="../img/icons8-check-48.png" width="30" height="30"> Check cluster setup</h4>
 <h4>By default kubernetes uses default namespace. For system pods it uses kube-system, flannel uses kube-flannel. To get all pods from all namespaces you can use</h4>
 
 ```sh
@@ -186,7 +186,7 @@ kubectl describe pod kube-flannel-ds-7nhwn -n kube-flannel
 kubectl logs kube-flannel-ds-7nhwn -n kube-flannel
 ```
 
- [<img src="../img/icons8-next-96.png" width="75" height="75"> <img src="../img/metallb-icon-color.png" width="75" height="75">][PlDa]
+ [<img src="../img/icons8-next-96.png" width="75" height="75"> Metallb Setup <img src="../img/metallb-icon-color.png" width="75" height="75">][PlDa]
  
  [PlDa]:<../5. MetalLB setup/README.md>
 
