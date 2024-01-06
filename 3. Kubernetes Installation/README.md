@@ -8,7 +8,7 @@
 
 <h4>2. after Inserting Guest Additions CD image</h4>
 
-From the terminal, run the following commands:
+<img src="../img/icons8-terminal-100.png" width="30" height="30">  From the terminal, run the following commands:
 
 ```sh
 sudo su
@@ -22,6 +22,7 @@ reboot
 <img src="../img/icons8-share-folder-48.png" width="30" height="30"> Your share folder will be in /media/sf<your_folder>
 
 # <h4>3.<img src="../img/icons8-close-96.png" width="30" height="30"> Disable Swap</h4>
+<h4>Terinal: <img src="icons8-terminal-100.png" width="30" height="30"> </h4>
 
 ```sh
 sudo sed -i '/\sswap\s/s/^/#/' /etc/fstab
