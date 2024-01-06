@@ -103,7 +103,7 @@ cat kube-flannel.yaml
 ```sh
 kubectl apply -f kube-flannel.yml
 ```
-<h4>If you need to reinstall Flannel use kubectl delete</h4>
+<h4> <img src="../img/icons8-rotate-96.png" width="30" height="30"> If you need to reinstall Flannel use kubectl delete</h4>
 
 ```sh
 kubectl delete -f kube-flannel.yml
