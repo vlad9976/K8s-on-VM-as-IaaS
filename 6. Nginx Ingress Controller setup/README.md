@@ -103,6 +103,7 @@ curl www.exaple.com
 
 <img src="./images/Screenshot_7.png" width="500" height="100">
 
+Let’s try to call the ingress rule:
 ```sh
 for i in {1..5}; do curl www.example.com; done
 ```
