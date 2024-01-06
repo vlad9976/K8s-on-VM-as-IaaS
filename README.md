@@ -18,19 +18,19 @@
    2.2 Insatll kubectl 1.25.4-00 🏗️</br>
    2.3 Install kubeadm 1.25.4-00 🏭
    
-3. Install docker🐋<br>
+3. Install Docker🐋<br>
    3.1 Install CRI(Container Runtime)<br>
    3.2 Install Mirantis
    
 4. Create Kubernetes cluster <br>
    4.1 Config image pull cri-dockerd.sock ⬇️<br>
-   4.2 Init kubernetes cluster ♾️<br>
+   4.2 Init Kubernetes cluster ♾️<br>
 
 5. Join worker nodes 🔌<br>
 
 6. Deploy Metallb
 
-7. Deploy Nginx ingress
+7. Deploy Nginx ingress controller 
 
 # Requirments
 VirtualBox📦
