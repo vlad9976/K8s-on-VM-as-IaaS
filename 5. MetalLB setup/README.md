@@ -4,11 +4,11 @@ Metallb Documentation: https://metallb.universe.tf/
 
 <img src="./images/0_-yEG9iR9SS23Z4F0.png" width="580" height="580">
 
-# <img src="/img/icons8-setup-96.png" width="30" height="30"> Setup a MetalLB Load Balancer on a on-premises Kubernetes Cluster
+# <h4><img src="/img/icons8-setup-96.png" width="30" height="30"> Setup a MetalLB Load Balancer on a on-premises Kubernetes Cluster</h4>
 
 Without MetalLB or any similar software solution the External IP of any new created service in Kubernetes will stay indefinitely in pending state. MetalLB’s purpose is to cover this deficit by offering a network load balancer implementation that integrates with standard network equipment, so that external services on bare-metal clusters work in a similar way as their equivalents in IaaS platform providers.
 
-# <img src="/img/icons8-example-64.png" width="30" height="30"> Example Try:
+<h4> <img src="/img/icons8-example-64.png" width="30" height="30"> Example Try:</h4>
 
 ```sh
 kubectl create deployment hello-server --image=gcr.io/google-samples/hello-app:1.0
@@ -18,7 +18,7 @@ kubectl get svc
 # <h4><img src="/img/icons8-output-96.png" width="30" height="30"> output</h4>
 <img src="./images/Screenshot_3.png" width="1000" height="120">
 
-# <img src="/img/icons8-install-64.png" width="30" height="30"> Installation
+# 1. <h4><img src="/img/icons8-install-64.png" width="30" height="30"> Installation</h4>
 The installation of MetalLB is easy we are going to perform it by applying the necessary manifests (everything will be provisioned in a new namespace named metallb-system)
 
 
@@ -36,13 +36,13 @@ we need to provide the components required by MetalLB. The next manifest will de
 ```sh
 kubectl get all --namespace metallb-system
 ```
-<img src="/img/icons8-output-96.png" width="30" height="30"> Output should be similler to this:
+<h4><img src="/img/icons8-output-96.png" width="30" height="30"> Output should be similler to this:</h4>h4>
 
 <img src="./images/Screenshot_1.png" width="900" height="400">
 
 The installation manifest does not include a configuration file. MetalLB’s components although will start, they will remain idle until we provide the required configuration as an IpAddressPool.
 
-<img src="/img/icons8-file-96.png" width="30" height="30"> Let’s name it ipaddresspool.yaml:
+<h4>2. <img src="/img/icons8-file-96.png" width="30" height="30"> Let’s name it ipaddresspool.yaml:</h4>
 
 ```sh
 apiVersion: metallb.io/v1beta1
@@ -65,7 +65,7 @@ IMPORTANT❗: Make sure you exclude this slice from the address pool of your DHC
 
 create an additional manifest and provision an object of type L2Advertisement
 
-<img src="/img/icons8-file-96.png" width="30" height="30"> Let’s name it l2advertisement.yaml:
+3. <img src="/img/icons8-file-96.png" width="30" height="30"> Let’s name it l2advertisement.yaml:
 
 ```sh
 apiVersion: metallb.io/v1beta1
@@ -78,7 +78,7 @@ spec:
   - default-pool
 ```
 
-Now let’s deploy these manifests:
+4. Now let’s deploy these manifests:
 
 ```sh
 kubectl apply -f ipaddresspool.yaml
@@ -119,7 +119,7 @@ for i in {1..5}; do curl http://192.168.13.247; done
 
 <img src="./images/Screenshot_5.png" width="900" height="400">
 
-Check out how the requests are load-balanced among our 3 pods!
+<h3><img src="/img/icons8-load-balancer-96.png" width="30" height="30"> Check out how the requests are load-balanced among our 3 pods!</h3>
 
  # [<img src="../img/icons8-next-96.png" width="75" height="75">   <img src="../img/icons8-nginx-accelerates-content-and-application-delivery-improves-security-96.png" width="75" height="75">][PlDa]
  [PlDa]:<../6. Nginx Ingress Controller setup/README.md>
