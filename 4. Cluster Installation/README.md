@@ -137,7 +137,7 @@ To generate new token on master use:
 ```sh
 kubeadm token create --print-join-command
 ```
-<h4>Now you can connect to your worker nodes and join the cluster <img src="../img/icons8-add-node-96.png" width="40" height="40"></h4>
+<h4> <img src="../img/icons8-add-node-96.png" width="30" height="30"> Now you can connect to your worker nodes and join the cluster</h4>
   
 <h4>Do not forget to add IP mapping for master-vm in /etc/hosts on all worker nodes</h4>
 
@@ -186,7 +186,7 @@ kubectl describe pod kube-flannel-ds-7nhwn -n kube-flannel
 kubectl logs kube-flannel-ds-7nhwn -n kube-flannel
 ```
 
- [<img src="../img/icons8-next-96.png" width="75" height="75"> <img src="../img/metallb-icon-color.png" width="75" height="75">][PlDa]
+ [<img src="../img/icons8-next-96.png" width="75" height="75"> Metallb Setup <img src="../img/metallb-icon-color.png" width="75" height="75">][PlDa]
  
  [PlDa]:<../5. MetalLB setup/README.md>
 
