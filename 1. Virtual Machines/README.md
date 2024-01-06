@@ -17,7 +17,7 @@
 <img src="images/Screenshot_3.png" width="700" height="350">
 <h4>Press “Next” and finish set up.</h4>
 
-# <h4>5. <img src="../img/icons8-shutdown-96.png" width="30" height="30"> Shutdown the new create vm to configure network</h4>
+# <h4>5. <img src="../img/icons8-shutdown-96.png" width="30" height="30"> Shutdown the new create vm to configure Network</h4>
 <img src="images/Screenshot_9.png" width="400" height="100">
 
 # <h4>6. <img src="../img/icons8-settings-96.png" width="30" height="30"> Choose “Settings”</h4>
