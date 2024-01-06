@@ -140,7 +140,7 @@ EOF
 sudo sysctl --system
 ```
 
-# <h4>8. Run the script and check setup was correctly applied.</h4>
+# <h4>8.<img src="../img/icons8-check-48.png" width="30" height="30"> Run the script and check setup was correctly applied.</h4>
 
 ```sh
 lsmod | grep br_netfilter
