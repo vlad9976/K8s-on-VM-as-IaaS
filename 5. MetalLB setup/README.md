@@ -4,11 +4,11 @@ Metallb Documentation: https://metallb.universe.tf/
 
 <img src="./images/0_-yEG9iR9SS23Z4F0.png" width="580" height="580">
 
-# <img src="/img/icons8-setup-96.png" width="30" height="30"> Setup a MetalLB Load Balancer on a on-premises Kubernetes Cluster
+# <h4><img src="/img/icons8-setup-96.png" width="30" height="30"> Setup a MetalLB Load Balancer on a on-premises Kubernetes Cluster</h4>
 
 Without MetalLB or any similar software solution the External IP of any new created service in Kubernetes will stay indefinitely in pending state. MetalLB’s purpose is to cover this deficit by offering a network load balancer implementation that integrates with standard network equipment, so that external services on bare-metal clusters work in a similar way as their equivalents in IaaS platform providers.
 
-# <img src="/img/icons8-example-64.png" width="30" height="30"> Example Try:
+#<h4> <img src="/img/icons8-example-64.png" width="30" height="30"> Example Try:</h4>
 
 ```sh
 kubectl create deployment hello-server --image=gcr.io/google-samples/hello-app:1.0
@@ -18,7 +18,7 @@ kubectl get svc
 # <h4><img src="/img/icons8-output-96.png" width="30" height="30"> output</h4>
 <img src="./images/Screenshot_3.png" width="1000" height="120">
 
-# <img src="/img/icons8-install-64.png" width="30" height="30"> Installation
+# <h4><img src="/img/icons8-install-64.png" width="30" height="30"> Installation</h4>
 The installation of MetalLB is easy we are going to perform it by applying the necessary manifests (everything will be provisioned in a new namespace named metallb-system)
 
 
@@ -36,13 +36,13 @@ we need to provide the components required by MetalLB. The next manifest will de
 ```sh
 kubectl get all --namespace metallb-system
 ```
-<img src="/img/icons8-output-96.png" width="30" height="30"> Output should be similler to this:
+<h4><img src="/img/icons8-output-96.png" width="30" height="30"> Output should be similler to this:</h4>h4>
 
 <img src="./images/Screenshot_1.png" width="900" height="400">
 
 The installation manifest does not include a configuration file. MetalLB’s components although will start, they will remain idle until we provide the required configuration as an IpAddressPool.
 
-<img src="/img/icons8-file-96.png" width="30" height="30"> Let’s name it ipaddresspool.yaml:
+<h4><img src="/img/icons8-file-96.png" width="30" height="30"> Let’s name it ipaddresspool.yaml:</h4>
 
 ```sh
 apiVersion: metallb.io/v1beta1
