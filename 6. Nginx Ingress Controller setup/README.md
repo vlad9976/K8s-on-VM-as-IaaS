@@ -4,13 +4,13 @@ Nginx Documentation: https://docs.nginx.com/nginx-ingress-controller/<br>
 <br>
 <img src="./images/0_DJNFUH_Bx-tKHZsj.png" width="580" height="650">
 
-Let’s define a namespace named ingress-nginx where Deployment and Ingress Controller will work together
+1. Let’s define a namespace named ingress-nginx where Deployment and Ingress Controller will work together
 
 
 ```sh
 kubectl create namespace ingress-nginx
 ```
-<img src="/img/icons8-file-96.png" width="30" height="30"> Let’s create a backend deployment
+2. <img src="/img/icons8-file-96.png" width="30" height="30"> Let’s create a backend deployment
 
 ```sh
 #deployment.yaml
@@ -36,7 +36,7 @@ spec:
           ports:
             - containerPort: 8080
 ```
-<img src="/img/icons8-file-96.png" width="30" height="30"> Lets create an Ingress:
+3. <img src="/img/icons8-file-96.png" width="30" height="30"> Lets create an Ingress:
 
 ```sh
 # ingress.yaml
@@ -63,7 +63,7 @@ spec:
 
 ```
 
-<img src="/img/icons8-file-96.png" width="30" height="30"> Lets create a Service:
+4. <img src="/img/icons8-file-96.png" width="30" height="30"> Lets create a Service:
 
 ```sh
 #service.yaml
@@ -89,7 +89,7 @@ status:
 
 ```
 
-Map in your /etc/hosts file the domain we choose "www.example.com" to LoadBalancer IP
+5. Map in your /etc/hosts file the domain we choose "www.example.com" to LoadBalancer IP
 
 <img src="./images/Screenshot_6.png" width="600" height="20">
 
