@@ -24,7 +24,7 @@ spec:
   selector:
     matchLabels:
       app: hello-server
-  replicas: 4
+  replicas: 3
   template:
     metadata:
       labels:
@@ -109,6 +109,8 @@ for i in {1..5}; do curl www.example.com; done
 ```
 
 <img src="/img/icons8-output-96.png" width="30" height="30"> Output:
+
+<h3><img src="/img/icons8-load-balancer-96.png" width="30" height="30"> Check out how the requests are load-balanced among our 3 pods!</h3>
 
 <img src="./images/Screenshot_8.png" width="600" height="200">
 
