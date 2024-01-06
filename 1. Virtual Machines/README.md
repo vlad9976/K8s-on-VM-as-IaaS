@@ -40,5 +40,3 @@
 
 [PlDa]:<../2. Ubuntu Installation/README.md>
 
-
-
