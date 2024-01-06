@@ -12,7 +12,7 @@
 # <h3><img src="/img/icons8-start-40.png" width="30" height="30">Steps in short</h3>
 1. Spin 3 Virtual machines<br>
    1.1 Master 🤖<br>
-   1.2 Worker 👾👾
+   1.2 Workers 👾👾
 3. Install Kubernetes cluster 1.25.4 version🕸️ <br>
    2.1 Install kubelet 1.25.4-00 🚤<br>
    2.2 Insatll kubectl 1.25.4-00 🏗️</br>
