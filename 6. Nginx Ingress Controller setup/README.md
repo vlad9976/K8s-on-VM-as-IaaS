@@ -111,4 +111,4 @@ for i in {1..5}; do curl www.example.com; done
 
 <img src="./images/Screenshot_8.png" width="600" height="200">
 
-# 🥳🥳Congratulation🥳🥳 You have been created kubernetes cluster on on-premises environment and integrated Metallb and deployed nginx ingress.
+# 🥳🥳Congratulation🥳🥳 You have been created kubernetes cluster on on-premises environment, Deployed Metallb loadbalancer solution and Nginx ingress.
