@@ -16,9 +16,11 @@ kubectl expose deployment hello-server --type LoadBalancer --port 80 --target-po
 kubectl get svc
 ```
 # <h4><img src="/img/icons8-output-96.png" width="30" height="30"> output</h4>
+
 <img src="./images/Screenshot_3.png" width="1000" height="120">
 
 # 1. <h4><img src="/img/icons8-install-64.png" width="30" height="30"> Installation</h4>
+
 The installation of MetalLB is easy we are going to perform it by applying the necessary manifests (everything will be provisioned in a new namespace named metallb-system)
 
 
@@ -36,7 +38,7 @@ we need to provide the components required by MetalLB. The next manifest will de
 ```sh
 kubectl get all --namespace metallb-system
 ```
-<h4><img src="/img/icons8-output-96.png" width="30" height="30"> Output should be similler to this:</h4>h4>
+<h4><img src="/img/icons8-output-96.png" width="30" height="30"> Output should be similler to this:</h4>
 
 <img src="./images/Screenshot_1.png" width="900" height="400">
 
