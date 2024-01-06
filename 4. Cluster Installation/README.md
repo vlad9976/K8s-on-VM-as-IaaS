@@ -9,14 +9,14 @@
 sudo kubeadm config images pull --cri-socket /run/cri-dockerd.sock
 ```
 
-<h4>2. Check /etc/hosts on master node. It should contain mapping for master-vm</h4>
+<h4>2. <img src="../img/icons8-check-48.png" width="30" height="30"> Check /etc/hosts on master node. It should contain mapping for master-vm</h4>
 <h4>DONT forget to map Workers to /etc/hosts on the master </h4>
 
 ```sh
 cat /etc/hosts
 ```
 
-# <h4>3.  Start init command</h4>
+# <h4>3. Start init command</h4>
 
 ```sh
 sudo kubeadm init \
@@ -28,7 +28,7 @@ sudo kubeadm init \
 
 <h4>In the command above pay attention that I chose subnet 10.244.0.0/16 for kubernetes cluster nodes, so pods will be communicating between each other using this subnet inside cluster.</h4>
 
-<h4>Installation may take some time and you can check master-vm.log file.</h4>
+<h4> <img src="../img/icons8-check-48.png" width="30" height="30"> Installation may take some time and you can check master-vm.log file.</h4>
 
 ```sh
 # cat master-vm.log
@@ -83,7 +83,7 @@ kubeadm join master-vm:6443 --token e8r3yb.it74vseuaxlzjlzp \
 wget https://raw.githubusercontent.com/flannel-io/flannel/master/Documentation/kube-flannel.yml
 
 ```
-<h4>In kube-flannel.yml check net-conf.json “Network” tag. It should have the same value as was used during control plane setup, i.e. 10.244.0.0/16.</h4>
+<h4><img src="../img/icons8-check-48.png" width="30" height="30">In kube-flannel.yml check net-conf.json “Network” tag. It should have the same value as was used during control plane setup, i.e. 10.244.0.0/16.</h4>
 
 ```sh
 #kube-flannel.yaml
@@ -120,7 +120,7 @@ FLANNEL_MTU=1450
 FLANNEL_IPMASQ=true
 ```
 
-<h4>Flannel pods are created in its own namespace kube-flannel, so you can check flannel pods are running</h4>
+<h4><img src="../img/icons8-check-48.png" width="30" height="30">Flannel pods are created in its own namespace kube-flannel, so you can check flannel pods are running</h4>
 
 ```sh
 kubectl get pods -n kube-flannel
@@ -156,7 +156,7 @@ kubectl get node
 or
 kubectl get node -o wide
 ```
-# <h4>✅ Check cluster setup</h4>
+# <h4><img src="../img/icons8-check-48.png" width="30" height="30"> Check cluster setup</h4>
 <h4>By default kubernetes uses default namespace. For system pods it uses kube-system, flannel uses kube-flannel. To get all pods from all namespaces you can use</h4>
 
 ```sh
