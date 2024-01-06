@@ -8,7 +8,7 @@ Metallb Documentation: https://metallb.universe.tf/
 
 Without MetalLB or any similar software solution the External IP of any new created service in Kubernetes will stay indefinitely in pending state. MetalLB’s purpose is to cover this deficit by offering a network load balancer implementation that integrates with standard network equipment, so that external services on bare-metal clusters work in a similar way as their equivalents in IaaS platform providers.
 
-#<h4> <img src="/img/icons8-example-64.png" width="30" height="30"> Example Try:</h4>
+<h4> <img src="/img/icons8-example-64.png" width="30" height="30"> Example Try:</h4>
 
 ```sh
 kubectl create deployment hello-server --image=gcr.io/google-samples/hello-app:1.0
