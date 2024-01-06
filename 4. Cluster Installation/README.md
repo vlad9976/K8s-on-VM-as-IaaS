@@ -28,13 +28,6 @@ sudo kubeadm init \
 
 <h4>In the command above pay attention that I chose subnet 10.244.0.0/16 for kubernetes cluster nodes, so pods will be communicating between each other using this subnet inside cluster.</h4>
 
-# <h4> TroubleShoot: if you need to undo kubeadm init </h4>
-
-```sh
-sudo kubeadm reset --cri-socket unix:///var/run/cri-dockerd.sock
-```
-Try kubeadm init again
-
 <h4> <img src="../img/icons8-check-48.png" width="30" height="30"> Installation may take some time and you can check master-vm.log file.</h4>
 
 ```sh
@@ -79,6 +72,13 @@ kubeadm join master-vm:6443 --token e8r3yb.it74vseuaxlzjlzp \
   sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 <h4>To copy /etc/kubernetes/admin.conf to your local computer you can use shared directory.</h4>
+
+# <h4> TroubleShoot: if you need to undo kubeadm init </h4>
+
+```sh
+sudo kubeadm reset --cri-socket unix:///var/run/cri-dockerd.sock
+```
+Try kubeadm init again
 
 # <h4>5. <img src="../img/icons8-network-65.png" width="40" height="40"> Configure Kubernetes cluster network</h4>
 
