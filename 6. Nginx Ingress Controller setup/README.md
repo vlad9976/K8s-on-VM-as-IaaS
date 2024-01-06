@@ -10,7 +10,7 @@ Let’s define a namespace named ingress-nginx where Deployment and Ingress Cont
 ```sh
 kubectl create namespace ingress-nginx
 ```
-Let’s create a backend deployment
+<img src="/img/icons8-file-96.png" width="30" height="30"> Let’s create a backend deployment
 
 ```sh
 #deployment.yaml
@@ -36,7 +36,7 @@ spec:
           ports:
             - containerPort: 8080
 ```
-Lets create an Ingress:
+<img src="/img/icons8-file-96.png" width="30" height="30"> Lets create an Ingress:
 
 ```sh
 # ingress.yaml
@@ -63,7 +63,7 @@ spec:
 
 ```
 
-Lets create a Service:
+<img src="/img/icons8-file-96.png" width="30" height="30"> Lets create a Service:
 
 ```sh
 #service.yaml
