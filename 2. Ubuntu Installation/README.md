@@ -1,6 +1,6 @@
 # <img src="../img/icons8-ubuntu-96.png" width="60" height="60"> Ubuntu Server 22.04.3 installation
 
-# <h4>1. Start <img src="../img/icons8-start-96.png" width="20" height="20"> your virtual machine.</h4>
+# <h4>1. <img src="../img/icons8-start-96.png" width="30" height="30"> Start your virtual machine.</h4>
 <img src="images/Screenshot_12.png" width="600" height="150">
 
 # <h4>2. installe Ubuntu Server</h4>
