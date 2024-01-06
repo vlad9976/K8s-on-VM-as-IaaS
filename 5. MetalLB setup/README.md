@@ -122,5 +122,8 @@ for i in {1..5}; do curl http://192.168.13.247; done
 
 <h3><img src="/img/icons8-load-balancer-96.png" width="30" height="30"> Check out how the requests are load-balanced among our 3 pods!</h3>
 
- # [<img src="../img/icons8-next-96.png" width="75" height="75">   <img src="../img/icons8-nginx-accelerates-content-and-application-delivery-improves-security-96.png" width="75" height="75">][PlDa]
+# Continue
+
+ # [<img src="../img/icons8-next-96.png" width="75" height="75"> Nginx Ingress Controller setup <img src="../img/icons8-nginx-accelerates-content-and-application-delivery-improves-security-96.png" width="75" height="75">][PlDa]
+ 
  [PlDa]:<../6. Nginx Ingress Controller setup/README.md>
