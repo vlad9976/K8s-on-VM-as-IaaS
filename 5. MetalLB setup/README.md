@@ -15,7 +15,7 @@ kubectl create deployment hello-server --image=gcr.io/google-samples/hello-app:1
 kubectl expose deployment hello-server --type LoadBalancer --port 80 --target-port 8080
 kubectl get svc
 ```
-# <img src="/img/icons8-output-96.png" width="30" height="30"> output
+# <h4><img src="/img/icons8-output-96.png" width="30" height="30"> output</h4>
 <img src="./images/Screenshot_3.png" width="1000" height="120">
 
 # <img src="/img/icons8-install-64.png" width="30" height="30"> Installation
@@ -36,7 +36,7 @@ we need to provide the components required by MetalLB. The next manifest will de
 ```sh
 kubectl get all --namespace metallb-system
 ```
-Output should be similler to this:
+<img src="/img/icons8-output-96.png" width="30" height="30"> Output should be similler to this:
 
 <img src="./images/Screenshot_1.png" width="900" height="400">
 
@@ -84,7 +84,7 @@ Now let’s deploy these manifests:
 kubectl apply -f ipaddresspool.yaml
 kubectl apply -f l2advertisement.yaml
 ```
-# Take it for a test
+# <h4>Take it for a test <img src="/img/icons8-test-64.png" width="30" height="30"></h4>
 
 ```sh
 # Remove old deployment and service.
@@ -99,7 +99,7 @@ kubectl expose deployment hello-server --type LoadBalancer --port 80 --target-po
 kubectl get svc
 ```
 
-Output:
+<img src="/img/icons8-output-96.png" width="30" height="30"> Output:
 
 <img src="./images/Screenshot_4.png" width="900" height="100">
 
@@ -115,7 +115,7 @@ Let’s try to call the load-balanced endpoint now:
 for i in {1..5}; do curl http://192.168.13.247; done
 ```
 
-Output:
+<img src="/img/icons8-output-96.png" width="30" height="30"> Output:
 
 <img src="./images/Screenshot_5.png" width="900" height="400">
 
