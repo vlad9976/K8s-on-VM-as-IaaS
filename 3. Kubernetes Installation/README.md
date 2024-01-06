@@ -1,6 +1,6 @@
 # <a href="https://kubernetes.io/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/kubernetes-icon.svg" alt="Kubernetes" height="60" /></a> Kubernetes Setup
 
-<h3>Configure share folder <img src="../img/icons8-share-folder-48.png" width="40" height="40"></h3>
+<h3><img src="../img/icons8-share-folder-48.png" width="40" height="40"> Configure share folder</h3>
 
 <h4>1. First of all go to Devices -> Insert Guest Additions CD image <img src="../img/icons8-cd-40.png" width="40" height="40"></h4>
 <img src="images/Screenshot_11.png" width="800" height="600">
