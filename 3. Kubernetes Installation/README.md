@@ -160,8 +160,8 @@ sysctl net.bridge.bridge-nf-call-iptables net.bridge.bridge-nf-call-ip6tables ne
 ```sh
 I created 2 worker nodes
 
-worker-1
-worker-2 
+worker-1 192.168.13.243
+worker-2 192.168.13.244
   
 following the same steps as for master node.
 ```
