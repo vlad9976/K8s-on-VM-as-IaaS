@@ -3,7 +3,7 @@
 <img src="/img/icons8-nginx-accelerates-content-and-application-delivery-improves-security-96.png" width="180" height="180">
 <img src="/img/icons8-virtualbox-logo-96.png" width="180" height="180">
 <br>
-<h3>Create Kubernetes bare-metal cluster work in a similar way as in IaaS platform provider🚀(On Virtualbox📦)</h3>
+<h3>Create Kubernetes VM's cluster work in a similar way as in IaaS platform provider🚀(On Virtualbox📦)</h3>
 <h4>😅 Why K8s? Because between the K and the S there are 8 letters</h4>
 <h4>We will create kubernetes cluster on Ubuntu Server 22.04 LTS<br>Using virtualbox and deploying Metallb Loadbalancer and Nginx ingress controller</h4>
 
