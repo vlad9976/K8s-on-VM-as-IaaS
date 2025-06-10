@@ -1,209 +1,163 @@
-# <img src="/img/icons8-cluster-64.png" width="60" height="60"> Create Kubernetes Cluster
+# 🚀 Kubernetes Cluster Installation Guide
 
-<h4>If you finished successfully all previous steps you should have 3 virtual machines with Ubuntu, kubernetes and docker installed.</h4>
-<h4>For cluster creation kubeadm command is used. First, it pulls images for kubernetes control plane to container runtime (docker in our case) and then initializes the control plane.<h4>
+<img src="/img/icons8-cluster-64.png" width="60" height="60" />
 
-<h4>1. <img src="../img/icons8-download-100.png" width="30" height="30"> Control plane will be created on master node, and worker nodes will be joined after all.</h4>
+---
+
+## 📦 1. Prerequisites
+
+Ensure all 3 VMs (1 master, 2 workers) have:
+
+- Ubuntu 22.04 LTS installed
+- Docker with Mirantis CRI
+- Kubernetes v1.25.4 installed
+
+---
+
+## 🧠 2. Pull Control Plane Images (Master)
 
 ```sh
 sudo kubeadm config images pull --cri-socket /run/cri-dockerd.sock
 ```
 
-<h4><img src="../img/icons8-map-94.png" width="30" height="30"> DONT forget to map Workers to /etc/hosts on the master </h4>
-<h4>2. <img src="../img/icons8-check-48.png" width="30" height="30"> Check /etc/hosts on master node. It should contain mapping for master-vm</h4>
+---
+
+## 🗺️ 3. Configure `/etc/hosts` on Master
 
 ```sh
 cat /etc/hosts
 ```
 
-# <h4>3.<img src="../img/icons8-button-50.png" width="30" height="30"> Start init command</h4>
+Add host mappings for all nodes.
+
+---
+
+## 🎛️ 4. Initialize Kubernetes Master
 
 ```sh
 sudo kubeadm init \
   --pod-network-cidr=10.244.0.0/16 \
-  --cri-socket /run/cri-dockerd.sock  \
+  --cri-socket /run/cri-dockerd.sock \
   --upload-certs \
-  --control-plane-endpoint=master-vm:6443 >  master-vm.log
+  --control-plane-endpoint=master-vm:6443 > master-vm.log
 ```
 
-<h4>In the command above pay attention that I chose subnet 10.244.0.0/16 for kubernetes cluster nodes, so pods will be communicating between each other using this subnet inside cluster.</h4>
+✅ Subnet `10.244.0.0/16` will be used for internal pod networking.
 
-<h4> <img src="../img/icons8-check-48.png" width="30" height="30"> Installation may take some time and you can check master-vm.log file.</h4>
+---
+
+## 📂 5. Configure `kubectl` Access
 
 ```sh
-# cat master-vm.log
-Your Kubernetes control-plane has initialized successfully!
-
-To start using your cluster, you need to run the following as a regular user:
-
-  mkdir -p $HOME/.kube
-  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-  sudo chown $(id -u):$(id -g) $HOME/.kube/config
-
-Alternatively, if you are the root user, you can run:
-
-  export KUBECONFIG=/etc/kubernetes/admin.conf
-
-You should now deploy a pod network to the cluster.
-Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
-  https://kubernetes.io/docs/concepts/cluster-administration/addons/
-
-You can now join any number of the control-plane node running the following command on each as root:
-
-  kubeadm join master-vm:6443 --token e8r3yb.it74vseuaxlzjlzp \
- --discovery-token-ca-cert-hash sha256:a43e08f52250a63486dd373cd50756a2ac0e90b62fbf0031a5e386f3d7e4f816 \
- --control-plane --certificate-key 308b550f6f9de654510db8b24cae39996727f70097ec8b9736a793a45573a7ed
-
-Please note that the certificate-key gives access to cluster sensitive data, keep it secret!
-As a safeguard, uploaded-certs will be deleted in two hours; If necessary, you can use
-"kubeadm init phase upload-certs --upload-certs" to reload certs afterward.
-
-Then you can join any number of worker nodes by running the following on each as root:
-
-kubeadm join master-vm:6443 --token e8r3yb.it74vseuaxlzjlzp \
- --discovery-token-ca-cert-hash sha256:a43e08f52250a63486dd373cd50756a2ac0e90b62fbf0031a5e386f3d7e4f816
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 
-<h4>4. Don’t forget to copy /etc/kubernetes/admin.conf to your home directory and to home directory on your master node as described in master-vm.log</h4>
+To copy config to local computer, use the shared folder.
 
-```sh
-  mkdir -p $HOME/.kube
-  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-  sudo chown $(id -u):$(id -g) $HOME/.kube/config
-```
-<h4>To copy /etc/kubernetes/admin.conf to your local computer you can use shared directory.</h4>
+---
 
-# <h4><img src="../img/icons8-undo-96.png" width="30" height="30"> TroubleShoot: if you need to undo kubeadm init </h4>
+## 🛠️ Troubleshooting Reset
 
 ```sh
 sudo kubeadm reset --cri-socket unix:///var/run/cri-dockerd.sock
 ```
-Try kubeadm init again
 
-# <h4>5. <img src="../img/icons8-network-65.png" width="40" height="40"> Configure Kubernetes cluster network</h4>
+---
 
-<h4>For communication between different nodes in cluster another CNI plugin is required. I chose Flannel for my cluster.</h4>
-
-<img src="/img/flannel.svg" width="30" height="30"> Flannel git page: https://github.com/flannel-io/flannel
+## 🌐 6. Install Cluster Network Plugin (Flannel)
 
 ```sh
 wget https://raw.githubusercontent.com/flannel-io/flannel/master/Documentation/kube-flannel.yml
-
 ```
-<h4><img src="../img/icons8-check-48.png" width="30" height="30">In kube-flannel.yml check net-conf.json “Network” tag. It should have the same value as was used during control plane setup, i.e. 10.244.0.0/16.</h4>
+
+✔️ Verify CIDR in file matches `10.244.0.0/16`
 
 ```sh
-#kube-flannel.yaml
-cat kube-flannel.yaml
-
-  net-conf.json: |
-    {
-      "Network": "10.244.0.0/16",
-      "Backend": {
-        "Type": "vxlan"
-      }
-    }
+cat kube-flannel.yml
 ```
 
-<h4>6. Finally, execute kubectl command</h4>
+📥 Apply Flannel:
 
 ```sh
 kubectl apply -f kube-flannel.yml
 ```
-<h4> <img src="../img/icons8-rotate-96.png" width="30" height="30"> If you need to reinstall Flannel use kubectl delete</h4>
+
+♻️ Reinstall:
 
 ```sh
 kubectl delete -f kube-flannel.yml
 ```
 
-<h4>Flanneld config is created in /etc/cni/net.d/10-flannel.conflist.
-When starting Flanneld extracts cluster network config in file /run/flannel/subnet.env.</h4>
+📂 Flannel creates:
 
-```sh
-#/run/flannel/subnet.env
-FLANNEL_NETWORK=10.244.0.0/16
-FLANNEL_SUBNET=10.244.1.1/24
-FLANNEL_MTU=1450
-FLANNEL_IPMASQ=true
-```
+- `/etc/cni/net.d/10-flannel.conflist`
+- `/run/flannel/subnet.env`
 
-<h4><img src="../img/icons8-check-48.png" width="30" height="30">Flannel pods are created in its own namespace kube-flannel, so you can check flannel pods are running</h4>
+---
+
+## 📊 7. Verify Flannel Is Running
 
 ```sh
 kubectl get pods -n kube-flannel
 ```
 
-# 👾 Joining worker nodes
+---
 
-<h4>As soon as Flannel installed, everything is ready to join worker nodes to cluster to finish setup.
-In log file of kubeadm init command (master-vm.log) there is already a join command to use to join worker node to cluster.</h4>
+## 👷 8. Join Worker Nodes
 
-<h3> <img src="/img/icons8-access-64.png" width="30" height="30"> kubeadm join requires a special token. It expires in 24 hours</h3>
-To generate new token on master use:
+On workers, use the join command:
+
+```sh
+kubeadm join master-vm:6443 --token <token> \
+--discovery-token-ca-cert-hash sha256:<hash> \
+--cri-socket unix:///var/run/cri-dockerd.sock
+```
+
+🧠 Reminder: Token is valid for 24 hours.
+
+Regenerate if needed:
 
 ```sh
 kubeadm token create --print-join-command
 ```
-<h4> <img src="../img/icons8-add-node-96.png" width="30" height="30"> Now you can connect to your worker nodes and join the cluster</h4>
-  
-<h4> <img src="../img/icons8-map-94.png" width="30" height="30"> Dont forget to map master-vm in /etc/hosts on all worker nodes</h4>
 
-<h4>7. We will have to append this line to the join command --cri-socket unix:///var/run/cri-dockerd.sock</h4>
+🗺️ Don't forget `/etc/hosts` mapping for master-vm on workers!
 
+---
 
-```sh
-kubeadm join k8smaster:6443 --token e8r3yb.it74vseuaxlzjlzp \
---discovery-token-ca-cert-hash sha256:a43e08f52250a63486dd373cd50756a2ac0e90b62fbf0031a5e386f3d7e4f816 --cri-socket unix:///var/run/cri-dockerd.sock
-```
-
-# <h4><img src="../img/icons8-undo-96.png" width="30" height="30"> TroubleShoot: if you need you undo kubeadm join
+## 🧹 Troubleshoot Worker Join
 
 ```sh
 sudo apt-mark unhold kubelet kubeadm
 sudo apt remove kubelet=1.25.4-00 kubeadm=1.25.4-00
-sudo rm -f /etc/kubernetes/kubelet.conf /etc/kubernetes/pki/ca.crt 
+sudo rm -f /etc/kubernetes/kubelet.conf /etc/kubernetes/pki/ca.crt
 sudo apt install kubelet=1.25.4-00 kubeadm=1.25.4-00
 ```
-Try Joining again
 
-<h4> <img src="../img/icons8-check-48.png" width="30" height="30"> Wait for a while and you can check the installation using kubectl</h4>
+Then try `kubeadm join` again.
 
-```sh
-kubectl get node
-or
-kubectl get node -o wide
-```
-# <h4><img src="../img/icons8-check-48.png" width="30" height="30"> Check cluster setup</h4>
-<h4>By default kubernetes uses default namespace. For system pods it uses kube-system, flannel uses kube-flannel. To get all pods from all namespaces you can use</h4>
+---
+
+## 📡 9. Check Cluster & Pod Status
 
 ```sh
+kubectl get nodes
 kubectl get pod --all-namespaces
-# Output
-NAMESPACE       NAME                                        READY   STATUS    RESTARTS      AGE
-kube-flannel    kube-flannel-ds-7nhwn                       1/1     Running   0              5m
-kube-flannel    kube-flannel-ds-sxfgg                       1/1     Running   0             10m
-kube-flannel    kube-flannel-ds-xxhlh                       1/1     Running   0             12m
-kube-system     coredns-565d847f94-9ht74                    1/1     Running   0             17m
-kube-system     coredns-565d847f94-wrq24                    1/1     Running   0             17m
-kube-system     etcd-k8smaster                              1/1     Running   0             17m
-kube-system     kube-apiserver-k8smaster                    1/1     Running   0             17m
-kube-system     kube-controller-manager-k8smaster           1/1     Running   0             17m
-kube-system     kube-proxy-9nfd4                            1/1     Running   0             17m
-kube-system     kube-proxy-cf7v7                            1/1     Running   0              5m
-kube-system     kube-proxy-cmq2k                            1/1     Running   0             10m
-kube-system     kube-scheduler-k8smaster                    1/1     Running   0             12m
 ```
-<h4>Pay attention that there are 3 flannel pods, each for every node.
-All pods should running fine.</h4>
 
-<h4> <img src="../img/icons8-error-64.png" width="30" height="30"> If you have some errors you can get details using</h4>
+✅ All pods (including flannel) should be in `Running` state.
+
+🔍 For errors:
 
 ```sh
-kubectl describe pod kube-flannel-ds-7nhwn -n kube-flannel
-kubectl logs kube-flannel-ds-7nhwn -n kube-flannel
+kubectl describe pod <pod-name> -n <namespace>
+kubectl logs <pod-name> -n <namespace>
 ```
 
- # [<img src="../img/icons8-next-96.png" width="75" height="75"> Metallb Setup <img src="../img/metallb-icon-color.png" width="75" height="75">][PlDa]
- 
- [PlDa]:<../5. MetalLB setup/README.md>
+---
 
+## ⏭️ Next Step
+
+👉 [Next: MetalLB Setup](../5.%20MetalLB%20setup/README.md)
