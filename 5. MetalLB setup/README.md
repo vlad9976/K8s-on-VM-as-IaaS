@@ -6,7 +6,7 @@
 ---
 
 ## 📌 Why MetalLB?
-
+<img src="/img/0_-yEG9iR9SS23Z4F0.png" width="60" height="60" />  
 Without MetalLB, services of type `LoadBalancer` stay in `pending` state on bare-metal clusters. MetalLB solves this by handling IP allocation and external access.
 
 ---
