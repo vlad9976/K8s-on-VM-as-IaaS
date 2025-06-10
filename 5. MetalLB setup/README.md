@@ -7,7 +7,7 @@
 
 ## 📌 Why MetalLB?
 
-<img src="./images/F0.png" width="400" height="400" />  
+<img src="./images/F0.png" width="640" height="640" />  
 Without MetalLB, services of type `LoadBalancer` stay in `pending` state on bare-metal clusters. MetalLB solves this by handling IP allocation and external access.
 
 ---
