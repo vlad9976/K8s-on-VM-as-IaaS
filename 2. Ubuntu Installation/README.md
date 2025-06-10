@@ -1,6 +1,6 @@
 # 🐧 Ubuntu Server 22.04.3 Installation Guide
 
-<img src="../img/icons8-ubuntu-96.png" width="60" height="60" /> <img src="../img/icons8-install-64.png" width="60" height="60" /> <img src="../img/icons8-vmware-96.png" width="60" height="60" />
+<img src="../img/icons8-ubuntu-96.png" width="60" height="60" /> <img src="../img/icons8-install-64.png" width="60" height="60" /> 
 
 ---
 
