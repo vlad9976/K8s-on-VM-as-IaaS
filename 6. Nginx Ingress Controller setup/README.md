@@ -1,20 +1,25 @@
-# <img src="/img/icons8-nginx-accelerates-content-and-application-delivery-improves-security-96.png" width="60" height="60"> Nginx Ingress Controller Setup
+# 🌐 NGINX Ingress Controller Setup
 
-Nginx Documentation: https://docs.nginx.com/nginx-ingress-controller/<br>
-<br>
-<img src="./images/0_DJNFUH_Bx-tKHZsj.png" width="580" height="650">
+<img src="/img/icons8-nginx-accelerates-content-and-application-delivery-improves-security-96.png" width="60" height="60" />  
+📘 [NGINX Ingress Docs](https://docs.nginx.com/nginx-ingress-controller/)
 
-1. Let’s define a namespace named ingress-nginx where Deployment and Ingress Controller will work together
+<img src="./images/0_DJNFUH_Bx-tKHZsj.png" width="580" height="650" />
 
+---
 
-```sh
+## 🏗️ 1. Create Namespace
+
+```bash
 kubectl create namespace ingress-nginx
 ```
-2. <img src="/img/icons8-file-96.png" width="30" height="30"> Let’s create a backend deployment:
 
-```sh
-#deployment.yaml
+---
 
+## 📦 2. Create Deployment
+
+Create a file `deployment.yaml`:
+
+```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -36,11 +41,14 @@ spec:
           ports:
             - containerPort: 8080
 ```
-3. <img src="/img/icons8-file-96.png" width="30" height="30"> Lets create an Ingress:
 
-```sh
-# ingress.yaml
+---
 
+## 🌐 3. Create Ingress Rule
+
+Create a file `ingress.yaml`:
+
+```yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -60,18 +68,18 @@ spec:
                 name: hello-server
                 port:
                   number: 80
-
 ```
 
-4. <img src="/img/icons8-file-96.png" width="30" height="30"> Lets create a Service:
+---
 
-```sh
-#service.yaml
+## 🔁 4. Create Service
 
+Create a file `service.yaml`:
+
+```yaml
 apiVersion: v1
 kind: Service
 metadata:
-  creationTimestamp: null
   labels:
     app: hello-server
   name: hello-server
@@ -84,39 +92,56 @@ spec:
   selector:
     app: hello-server
   type: LoadBalancer
-status:
-  loadBalancer: {}
-
 ```
 
-5. <img src="../img/icons8-map-94.png" width="30" height="30">Map in your /etc/hosts file the domain we choose "www.example.com" to LoadBalancer IP
+---
 
-<img src="./images/Screenshot_6.png" width="600" height="20">
+## 🗺️ 5. Map Domain to LoadBalancer IP
 
-# <h4><img src="/img/icons8-test-64.png" width="30" height="30"> Test Ingress </h4>
+Update `/etc/hosts`:
 
-```sh
-curl www.exaple.com
+```plaintext
+192.168.13.247   www.example.com
 ```
 
-<img src="/img/icons8-output-96.png" width="30" height="30"> Output:
+📸  
+<img src="./images/Screenshot_6.png" width="600" height="20" />
 
-<img src="./images/Screenshot_7.png" width="500" height="100">
+---
 
-Let’s try to call the ingress rule:
-```sh
+## 🧪 6. Test Ingress Access
+
+```bash
+curl www.example.com
+```
+
+📸 Output:  
+<img src="./images/Screenshot_7.png" width="500" height="100" />
+
+💡 Load Balancer Demo:
+
+```bash
 for i in {1..5}; do curl www.example.com; done
 ```
 
-<img src="/img/icons8-output-96.png" width="30" height="30"> Output:
+📸 Output:  
+<img src="./images/Screenshot_8.png" width="600" height="200" />
 
-<img src="./images/Screenshot_8.png" width="600" height="200">
+🎉 Watch requests cycle across all 3 pods!
 
-<h3><img src="/img/icons8-load-balancer-96.png" width="30" height="30"> Check out how the requests are load-balanced among our 3 pods!</h3>
+---
 
-# <h3>🥳🥳Congratulation!🥳🥳 You have been created kubernetes cluster on on-premises environment, Deployed Metallb loadbalancer solution and Nginx  Controller</h3>
+## 🎉 Final Message
 
-# <h3>Hope everything went well! Happy Kubernetes-ing on your on-premises infrastructure</h3>
+Congratulations! 🥳  
+You’ve successfully:
 
- # [<img src="/img/icons8-start-40.png" width="70" height="70">   <img src="../img/icons8-back-60.png" width="75" height="75">][PlDa]
- [PlDa]:<../>
+- Created a Kubernetes Cluster 🧱  
+- Deployed MetalLB ⚖️  
+- Installed & Verified NGINX Ingress Controller 🌐
+
+Happy Kubernetes-ing in your on-prem lab!
+
+---
+
+🔙 [< Back to Start](../)
