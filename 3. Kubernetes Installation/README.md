@@ -1,12 +1,13 @@
 # ⚙️ Kubernetes Setup Guide (Master Node)
 
-A clear and visual walkthrough to set up Kubernetes on Ubuntu Server 22.04 LTS inside a VirtualBox environment. This guide includes shared folder configuration, swap disabling, Docker & Kubernetes installation, and more.
+<a href="https://kubernetes.io/" target="_blank"><img src="https://profilinator.rishav.dev/skills-assets/kubernetes-icon.svg" alt="Kubernetes" height="60" /></a>
 
 ---
 
 ## 📁 1. Shared Folder Configuration
 
-🔹 Go to **Devices → Insert Guest Additions CD Image**
+🔹 Go to **Devices → Insert Guest Additions CD Image**  
+<img src="images/Screenshot_11.png" width="800" height="600" />
 
 🔹 Run the following commands:
 
@@ -25,19 +26,18 @@ reboot
 
 ## 🚫 2. Disable Swap
 
-Kubernetes requires swap to be disabled:
-
 ```bash
 sudo sed -i '/\sswap\s/s/^/#/' /etc/fstab
 sudo swapoff -a
 free -h
 ```
 
+📷 Should look like this:  
+<img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*XFIwxWHc9SMMXMcWb65-GQ.png" width="500" height="30" />
+
 ---
 
 ## ☸️ 3. Install Kubernetes (v1.25.4)
-
-Create and run a `k8s.sh` script:
 
 ```bash
 sudo apt-get update
@@ -49,18 +49,20 @@ sudo apt install kubelet=1.25.4-00 kubeadm=1.25.4-00 kubectl=1.25.4-00 -y
 sudo apt-mark hold kubelet kubeadm kubectl
 ```
 
-✅ Verify install:
+✅ Verify:
 
 ```bash
 kubectl version --output=yaml
 kubeadm version --output=yaml
 ```
 
+📦 Repeat step 4 on:
+- 🐧 Ubuntu → same setup
+- 🪟 Windows → https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/
+
 ---
 
-## 🐋 4. Install Docker Engine (With Mirantis CRI)
-
-Create and run `docker.sh`:
+## 🐳 4. Install Docker with CRI
 
 ```bash
 sudo apt update
@@ -73,7 +75,7 @@ sudo apt install -y containerd.io docker-ce docker-ce-cli
 sudo mkdir -p /etc/systemd/system/docker.service.d
 ```
 
-Setup `daemon.json`:
+Create Docker daemon config:
 
 ```bash
 sudo tee /etc/docker/daemon.json <<EOF
@@ -88,9 +90,15 @@ sudo tee /etc/docker/daemon.json <<EOF
 EOF
 ```
 
+✅ Verify:
+
+```bash
+docker --version
+```
+
 ---
 
-## 🔌 5. Install Mirantis CRI
+## 🧩 5. Install Mirantis CRI Adapter
 
 ```bash
 VER=$(curl -s https://api.github.com/repos/Mirantis/cri-dockerd/releases/latest | grep tag_name | cut -d '"' -f 4 | sed 's/v//g')
@@ -108,7 +116,7 @@ sudo systemctl enable cri-docker.service
 sudo systemctl enable --now cri-docker.socket
 ```
 
-✅ Check install:
+✅ Check:
 
 ```bash
 cri-dockerd --version
@@ -117,9 +125,7 @@ systemctl status cri-docker.socket
 
 ---
 
-## ⚙️ 6. Kubernetes Prerequisites
-
-Run `prerequisites.sh`:
+## 🧷 6. Kubernetes Kernel & Networking Prerequisites
 
 ```bash
 sudo tee /etc/modules-load.d/k8s.conf <<EOF
@@ -139,7 +145,7 @@ EOF
 sudo sysctl --system
 ```
 
-✅ Check:
+✅ Confirm settings:
 
 ```bash
 lsmod | grep br_netfilter
@@ -149,13 +155,16 @@ sysctl net.bridge.bridge-nf-call-iptables net.bridge.bridge-nf-call-ip6tables ne
 
 ---
 
-## 👷‍♂️ 7. Prepare Worker Nodes
+## 👾 7. Set Up Worker Nodes
 
-Repeat all steps on each worker node. Example IPs:
+Repeat all steps from this guide on your worker nodes:
 
 - `worker-1`: 192.168.13.243
 - `worker-2`: 192.168.13.244
 
 ---
 
-✨ You are now ready to initialize the Kubernetes cluster and join worker nodes!
+## ✅ Continue Setup
+
+👉 [Next: Worker Nodes 👾👾](../1.%20Virtual%20Machines/README.md)  
+👉 [Next: Cluster Installation 🧱](../4.%20Cluster%20Installation/README.md)
