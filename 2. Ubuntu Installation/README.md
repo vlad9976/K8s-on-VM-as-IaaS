@@ -1,47 +1,95 @@
-# <img src="../img/icons8-ubuntu-96.png" width="60" height="60"> Ubuntu Server 22.04.3 installation
+# 🐧 Ubuntu Server 22.04.3 Installation Guide
 
- <h4>1. <img src="../img/icons8-start-96.png" width="30" height="30"> Start your virtual machine.</h4>
-<img src="images/Screenshot_12.png" width="600" height="150">
+<img src="../img/icons8-ubuntu-96.png" width="60" height="60" /> <img src="../img/icons8-install-64.png" width="60" height="60" /> <img src="../img/icons8-vmware-96.png" width="60" height="60" />
 
-# <h4>2. <img src="../img/icons8-install-64.png" width="30" height="30"> installe Ubuntu Server</h4>
-<img src="images/Screenshot_2.png" width="800" height="600">
+---
 
-# <h4>3. Bridge network adapter generated IP 192.168.13.242 for new VM (Your ip would be similer to your network ip range)</h4>
-<img src="images/Screenshot_3.png" width="800" height="600">
+## ⚙️ Step-by-Step Installation
 
-# <h4>4. There is no need to use LVM groups, so you can skip it</h4>
-<img src="images/Screenshot_4.png" width="800" height="600">
+### 1️⃣ Start your Virtual Machine
 
-# <h4>5. Choose you username/password and server name</h4>
-<img src="images/Screenshot_5.png" width="800" height="600">
+Power up the VM you created in VirtualBox. Make sure the ISO is mounted.
 
-# <h4>6.<img src="../img/icons8-install-64.png" width="30" height="30"> You can also install OpenSSH <img src="../img/icons8-ssh-96.png" width="30" height="30"> to connect to your virtual machine by ssh</h4>
-<img src="images/Screenshot_6.png" width="800" height="600">
+![Start VM](images/Screenshot_12.png)
 
-# <h4>Now proceed with installation and wait⏳ until Ubuntu is successfully installed on your virtual machine</h4>
+---
 
+### 2️⃣ Begin Ubuntu Server Installation
 
-# <h3>Finally🥳, installer will ask you to reboot your machine, so after restart login and let’s check that everything goes right way</h3>
+You'll see the Ubuntu installation screen. Follow the wizard to begin setup.
 
-# <h4> 7.<img src="../img/icons8-to-do-96.png" width="30" height="30"> Check Ubuntu installation </h4>
-✅Check access to you local computer from master node<br>
+![Install Ubuntu](images/Screenshot_2.png)
 
-     ping <Localhost IP>
-</br>
-✅Check access to internet on your master node<br>
+---
 
-     curl www.google.com
-</br>     
-✅Finally, you can check available network interfaces.<br>
+### 3️⃣ IP Address via Bridge Adapter
 
-    ip a 
-</br>
+Ubuntu will obtain a bridged IP (e.g., `192.168.x.x`) so it lives on the same network as your host.
 
-<h4> If all checks were successfully ✅✅✅ passed you are ready to install docker and kubernetes on your virtual machine</h4>
+![IP Bridged](images/Screenshot_3.png)
 
-# Continue
+---
 
-# [<img src="../img/icons8-next-96.png" width="75" height="75"> Kubernetes & Docker Setup <img src="../img/icons8-kubernetes-96.png" width="75" height="75"><img src="../img/icons8-docker-96.png" width="75" height="75">][PlDa]
+### 4️⃣ Skip LVM Group Setup
 
-[PlDa]:<../3. Kubernetes Installation/README.md>
+LVM is optional; for simplicity, you can skip it unless you have advanced needs.
 
+![Skip LVM](images/Screenshot_4.png)
+
+---
+
+### 5️⃣ Set Username, Password & Hostname
+
+Choose a meaningful username, secure password, and a unique machine name (e.g., `k8s-master`).
+
+![Set Username](images/Screenshot_5.png)
+
+---
+
+### 6️⃣ Optional: Install OpenSSH
+
+This lets you connect via SSH. Highly recommended! 🔐
+
+![Install OpenSSH](images/Screenshot_6.png)
+
+---
+
+### 7️⃣ Wait for Installation to Complete ⏳
+
+Sit back and relax while Ubuntu gets installed. Once prompted, reboot your machine.
+
+---
+
+## ✅ Post-Install Checks
+
+After the reboot, login with the credentials you created and run the following:
+
+### 🧪 Verify Host Connectivity
+
+```bash
+ping <your-host-IP>
+```
+
+### 🌐 Test Internet Access
+
+```bash
+curl www.google.com
+```
+
+### 📡 Check Network Interfaces
+
+```bash
+ip a
+```
+
+If all tests pass ✅✅✅, your VM is ready for the next step!
+
+---
+
+## ⏭️ Continue To...
+
+### 🐳☸️ [Kubernetes & Docker Setup](../3.%20Kubernetes%20Installation/README.md)
+
+Let’s install Docker and Kubernetes and turn this VM into a container powerhouse!
+
+---
